@@ -1,47 +1,28 @@
-# Python Journey 
+# Python Journey
 
-Welcome to my Python learning journey.
+This repository contains my Python learning progress, practice programs, and small projects.
 
-This repository documents my progress from beginner to advanced Python through daily practice and projects.
+## Topics
 
-## Learning Roadmap
-
-### Python Fundamentals
-- [x] Variables
-- [x] Input & Output
-- [x] Conditional Statements
-- [x] Loops
-- [ ] Functions
-- [ ] Lists
-- [ ] Dictionaries
-- [ ] Tuples
-- [ ] Sets
-
-### Intermediate Python
-- [ ] OOP
-- [ ] File Handling
-- [ ] Error Handling
-- [ ] Modules
-
-### Advanced Python
-- [ ] APIs
-- [ ] Web Scraping
-- [ ] Automation
-- [ ] Data Structures
+* Basics
+* Conditions
+* Loops
+* Functions
+* Lists
+* Dictionaries
+* OOP
+* File Handling
+* Advanced Python
 
 ## Projects
 
-| Project | Status |
-|----------|---------|
-| Guess The Number |  Completed |
-| Rock Paper Scissors |  Planned |
-| Calculator |  Planned |
-| Tic Tac Toe |  Planned |
+* Guess The Number
+* Rock Paper Scissors
+* Calculator
+* Tic Tac Toe
 
-## Goal
+## Purpose
 
-Build 50+ Python projects and become proficient in Python development.
+I'm using this repository to track my Python learning and build projects as I progress.
 
-## Started
-
-2026
+Started: 2026
