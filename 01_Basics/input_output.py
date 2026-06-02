@@ -13,9 +13,11 @@ age = 29
 print(age,type(age)) # normal like the above code just printing the age and its data type
 
 score = 80.5
-print(isinstance(score , float)) #so the thing we did in this code is that to check wheather the datatype matches the variable data or not
-# like for example score is 80.5 and while checking we use isinstance and keep value if the value is int and we put float it shows false 
-#becuase the value is int not float
+print(isinstance(score, float))
+
+# isinstance() checks whether a variable belongs to a specific data type.
+# Here score contains 80.5, which is a float.
+# Since we are checking if score is a float, the result is True.
 
 #one more example 
 score = True
