@@ -1,10 +1,12 @@
-#now we are in day one and we will learn about the string how do we do it and how do we declare it
-#in python we use the single and double quotes as same for example
-p = "pasang"
-q = 'pasamg'
-print(p , q) # from this example we can see that the quotes dosent matter even though it has one or 2 quotes
+# now we are in day one and we will learn about strings
+# how do we declare them?
+# in python we can use both single and double quotes
 
-#now if we want to write string in differeent line we use 3quotes for example
+p = "ace snow"
+q = 'ace snow'
+print(p, q)  # quotes do not matter for normal strings
+
+# now if we want to write strings in different lines we use triple quotes
 
 e = """
 sodfnsdf
@@ -12,65 +14,60 @@ sdfsdf
 sdfsd
 fs
 dfsd
-
 """
 print(e)
-# so from the above example we can see how to write multiple string
 
+# checking if a string contains a character or word using the 'in' operator
 
-#now sometimes we need to check if a string cohntains one or more than more character. to check that we use in operator for example
 f = 'Hello world'
-print('hello' in f) #False
-print('Hello' in f) #true
-print('f' in f) #False
-print('rld' in f) #true
-print('d' in f) #true
-print('Hell' in f) #true
-print('w' in f) #true
-#so now what we did in the above code was that we use in operator which helped to check is that word or alphabet in that string or not 
-#like we print f and used operator and searched f it shows false because in hello world there is no any word like f and for hello also we can
-# see that one hello is true while another is false why cause its casesensitive we can see in variable f h is capital letter not small so
-# when we checked the hello should be in capital Hello that why lets go with another example 
+print('hello' in f)   # False
+print('Hello' in f)   # True
+print('f' in f)       # False
+print('rld' in f)     # True
+print('d' in f)       # True
+print('Hell' in f)    # True
+print('w' in f)       # True
+
+# the 'in' operator checks whether a word or character exists in a string
+# it is case-sensitive
+
 text = "Python Programming"
 
-print('Python' in text) #true
-print('python' in text) #false case sensitive
-print('gram' in text) #true in programming gram
-print('Pro' in text) # true in progra 
-print('z' in text) # false no z in the word
+print('Python' in text)   # True
+print('python' in text)   # False
+print('gram' in text)     # True
+print('Pro' in text)      # True
+print('z' in text)        # False
 
-#last one example
-pa = "pasang lama"
-print('pasa' in pa) # true
-print('Lama' in pa) #false  uppercase l is not there only lower case is there so
-print('anG' in pa)#false
-print('lama' in pa) #true
-print('pasanglama' in pa)#false space lacking
+# another example
 
-# !!!!!!!!!!!!! note : while printing always put the declare variable name like print('pasang'  in pa)
+pa = "ace snow"
+print('ace' in pa)        # True
+print('Snow' in pa)       # False
+print('anG' in pa)        # False
+print('snow' in pa)       # True
+print('acesnow' in pa)    # False (space missing)
 
-#now checking the length
-p = "pasang lama is a good boy in the class"
-print(len(p)) # len() returns the total number of characters in the string
-#!!!!!!!!!! note space also counts here
+# note: always use the variable name while checking
+# example: print('ace' in pa)
 
+# checking the length of a string
 
+p = "ace snow is a good student in the class"
+print(len(p))  # spaces are also counted
 
-#about indexing like for example there is world acegaming looking from first a is not 1 it is 0 we count like this and looking from back
-#gaming g is -1 we point it like this in python
-#for example
+# indexing and slicing
 
 d = "Sakalaka boom"
-print(d[0:7:1]) #0 is S and 7 means upto which character like 7 is a but we are printing k but k is 6 why we wrote 7 we need to step one step
-#ahead so and what is 1 in the last go 1 1 step a head like for sakala s and then a then k and then l like this lets see the result
+print(d[0:7:1])  # prints characters from index 0 to 6
 
 qs = "Ace snow"
-print('ace' in qs)#false
-print('snow' in qs)#true
-print('ow' in qs)#true
-print('Now' in qs)#false
+print('ace' in qs)    # False
+print('snow' in qs)   # True
+print('ow' in qs)     # True
+print('Now' in qs)    # False
 
-saad = "pasang"
+saad = "ace snow"
 print(len(saad))
 print(saad[1:4:2])
 
