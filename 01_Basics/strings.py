@@ -51,7 +51,7 @@ print('pasanglama' in pa)#false space lacking
 
 #now checking the length
 p = "pasang lama is a good boy in the class"
-print(len(p)) #38 use len operator for printing the length of the character
+print(len(p)) # len() returns the total number of characters in the string
 #!!!!!!!!!! note space also counts here
 
 
