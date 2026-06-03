@@ -64,3 +64,40 @@ print("City:", city)
 print("Country:", country)
 
 # Variables help us store information and reuse it whenever needed.
+
+
+# Example 1: Storing a favorite game
+
+favorite_game = "Minecraft"
+print("Favorite Game:", favorite_game)
+
+# Example 2: Storing marks
+
+math_marks = 95
+english_marks = 88
+
+print("Math Marks:", math_marks)
+print("English Marks:", english_marks)
+
+# Example 3: Using variables in a sentence
+
+student_name = "Ace"
+grade = 12
+
+print(student_name, "is studying in grade", grade)
+
+# Example 4: Adding numbers stored in variables
+
+num1 = 10
+num2 = 20
+
+total = num1 + num2
+print("Total =", total)
+
+# Example 5: Updating a variable
+
+coins = 50
+print("Coins:", coins)
+
+coins = coins + 25
+print("Coins after earning:", coins)
