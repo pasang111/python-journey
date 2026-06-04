@@ -1,4 +1,4 @@
-# Building a Simple Bill Splitter
+#gi Building a Simple Bill Splitter
 
 # We start with a bill total of 0.
 running_total = 0
