@@ -1,4 +1,4 @@
-                                                            # LOOP NOTE : HOW DO LOOPS WORK IN PY
+                                                    # LOOP NOTE : HOW DO LOOPS WORK IN PY
 #loops are used to repeat a block of code for a set number of times. 
 
 qq_q = ['qsd', 1, "asdasd", 'asdasd', 'asdasd']
