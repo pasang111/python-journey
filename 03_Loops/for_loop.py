@@ -67,7 +67,7 @@ developer_name = ["shyam", "ram", "hari"]
 for developers in developer_name:
     if developers == "shyam":
         break
-    print(developers)
+print(developers)
 
 # Continue statement
 
@@ -78,7 +78,14 @@ my_name = ["Ace", "Snow", "Gaming"]
 for name in my_name:
     if name == "Snow":
         continue
-    print(name)
+print(name)
+# The loop goes through each item in the list one by one.
+# When name becomes "Snow", the condition is True, so continue
+# skips the rest of that iteration and moves to the next item ("Gaming").
+# Since print(name) is outside the loop, it only runs once after the loop ends.
+# At that point, name contains the last value processed, which is "Gaming".
+# Therefore, the output is: Gaming
+
 
 she = ["Alice", "panda", "Cheetah"]
 
