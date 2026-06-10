@@ -1,52 +1,63 @@
-# Function Arguments
+# Default arguments are used when no value is provided.
 
-# what are function arguments?
-# function arguments are the values we pass into a function when calling it
+def welcome(name="Ace"):
+    print("Welcome", name)
 
-# parameter = parameter are the variable inside the function
-# argument = argument are the actual value passed while calling the function
+# In welcome(), no argument is passed, so Python uses the default value "Ace".
+welcome()
 
-
-# positional arguments
-
-def greet(name):
-    print("Hello", name)
-
-# here "Ace" is the argument
-greet("Ace")
-
-# here "John" is another argument
-greet("John")
-
-# Python matches the value based on position
-# name = "Ace"
-# name = "John"
-
-# so when we write greet("Ace")
-# Python takes the value "Ace" and stores it in the parameter called name
-# then print() displays Hello Ace
+# The default value is replaced by "John" because "John" is passed as an argument.
+welcome("John")
 
 
-# multiple arguments
+# Return values
 
-def student(name, age):
-    print(name, age)
+# print() displays output on the screen.
+# return sends a value back to the caller.
 
-student("Ace", 20)
-student("Snow", 21)
+# Example:
+def add(a, b):
+    return a + b
 
-# first value goes into name and second value goes into age
-# for student("Ace", 20)
-# name = "Ace"
-# age = 20
+result = add(10, 20)
 
-# for student("Snow", 21)
-# name = "Snow"
-# age = 21
+print(result)
 
-# Python always matches the values from left to right
-# first argument goes to first parameter
-# second argument goes to second parameter
+# The returned value is stored in the variable result.
+# This allows us to reuse it later in the program.
 
-# if we pass too few or too many arguments
-# Python will show an error because the number of values does not match the parameters
+# To call the function again, pass the required arguments to the function.
+
+print(add(20, 30))
+print(add(19, 40))
+
+# Python calculates the result, and print() displays it.
+
+
+# Multiple return values
+
+def get_user():
+    return "Ace", 20
+
+name, age = get_user()
+
+print(name)
+print(age)
+
+# The function returns two values.
+# name receives "Ace".
+# age receives 20.
+
+
+# Another example of multiple return values
+
+def calculate(a, b):
+    return a + b, a * b
+
+sum_result, multiply_result = calculate(5, 10)
+
+print(sum_result)
+print(multiply_result)
+
+# The first value is stored in sum_result.
+# The second value is stored in multiply_result.
