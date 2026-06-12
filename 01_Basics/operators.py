@@ -71,3 +71,29 @@ print("Java" in text)
 
 print("Java" not in text)
 # Returns True because Java is not present in the string.
+
+# Identity Operators
+
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is b)
+# True because both variables point to the same object in memory.
+
+print(a is c)
+# False because they are different objects even though the values are the same.
+
+print(a is not c)
+# True because a and c are not the same object.
+
+
+# More Assignment Operators
+
+marks = 20
+
+marks /= 2
+print(marks)  # Same as marks = marks / 2
+
+marks %= 3
+print(marks)  # Same as marks = marks % 3
