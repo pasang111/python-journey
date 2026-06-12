@@ -36,3 +36,16 @@ print(ss , type(ss) , isinstance(ss,int) ) #why false ans cause pasang is str no
 
 ccc = "1213"
 print(isinstance(ccc , float))
+
+user_name = input("Enter your name")
+print("Hello", user_name)
+
+#input() always takes data as a string
+
+age = int(input("Enter your age: "))
+print("Your age is", age, "years old")
+
+#converting input to float
+
+height = float(input("Enter your height in meters: "))
+print("Your height is", height, "meters")
