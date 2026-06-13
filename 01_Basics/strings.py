@@ -124,3 +124,11 @@ print(name[1])   # a
 print(name[-1])  # g (last character)
 
 # negative indexing starts from the end of the string
+
+# removing extra spaces
+
+text = "   hello world   "
+
+print(text.strip())
+
+# strip() removes spaces from the beginning and end
