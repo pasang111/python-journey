@@ -73,3 +73,24 @@ print(saad[1:4:2])
 
 hap = "RUMPUM"
 print(hap[1::3])
+
+# string methods
+
+name = "ace snow"
+
+print(name.upper())
+# converts all characters to uppercase
+
+print(name.lower())
+# converts all characters to lowercase
+
+print(name.title())
+# makes the first letter of each word uppercase
+
+print(name.replace("ace", "hero"))
+# replaces one word with another
+
+print(name.startswith("ace"))
+# checks if the string starts with "ace"
+
+print(name.endswith("snow"))
