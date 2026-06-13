@@ -132,3 +132,15 @@ text = "   hello world   "
 print(text.strip())
 
 # strip() removes spaces from the beginning and end
+
+# checking if all characters are letters
+
+word = "Python"
+
+print(word.isalpha())  # True
+
+# checking if all characters are numbers
+
+num = "12345"
+
+print(num.isdigit())   # True
