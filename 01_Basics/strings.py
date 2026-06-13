@@ -94,3 +94,14 @@ print(name.startswith("ace"))
 # checks if the string starts with "ace"
 
 print(name.endswith("snow"))
+
+# joining strings together
+
+first_name = "Ace"
+last_name = "Snow"
+
+full_name = first_name + " " + last_name
+
+print(full_name)
+
+# + is used to combine strings together
