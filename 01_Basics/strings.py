@@ -114,3 +114,13 @@ age = 20
 print(f"My name is {name} and I am {age} years old")
 
 # f-strings allow us to insert variables directly into a string
+
+# accessing a single character using index
+
+name = "Pasang"
+
+print(name[0])   # P
+print(name[1])   # a
+print(name[-1])  # g (last character)
+
+# negative indexing starts from the end of the string
