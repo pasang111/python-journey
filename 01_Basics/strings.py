@@ -105,3 +105,12 @@ full_name = first_name + " " + last_name
 print(full_name)
 
 # + is used to combine strings together
+
+# f-string example
+
+name = "Ace"
+age = 20
+
+print(f"My name is {name} and I am {age} years old")
+
+# f-strings allow us to insert variables directly into a string
