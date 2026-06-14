@@ -101,3 +101,16 @@ if password == "Ace123":
     print("User logged in successfully")
 else:
     print("Password incorrect")
+
+#asking user input to enter the password
+
+passcode = "Myaceacademy"
+
+while True:
+    user_one = input("Please enter your password to log-in: ")
+
+    if user_one == "Myaceacademy":
+        print("Logged in successfully")
+        break
+    else:
+        print("Incorrect password") 
