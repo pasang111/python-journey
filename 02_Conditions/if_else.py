@@ -92,3 +92,12 @@ else:
 
 # If remainder is 0 the number is even.
 # Otherwise it is odd.
+
+#simple password checking method using if else
+
+password = "Ace123"
+
+if password == "Ace123":
+    print("User logged in successfully")
+else:
+    print("Password incorrect")
