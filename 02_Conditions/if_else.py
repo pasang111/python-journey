@@ -50,3 +50,15 @@ elif username == "Ace":
     print("Welcome Ace")
 else:
     print("Unknown User")
+
+# more example for if else
+# checking weather a number is positive negative or zero
+
+number = -5
+
+if number > 0:
+    print("Positive number")
+elif number <0 :
+    print("Negative number")
+else:
+    print("Zero")
