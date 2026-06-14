@@ -114,3 +114,43 @@ while True:
         break
     else:
         print("Incorrect password") 
+
+# Store the correct password in a variable
+passcode = "Myaceacademy"
+
+# Keep asking until the correct password is entered
+while True:
+    # Get password input from the user
+    user_one = input("Please enter your password to log-in: ")
+
+    # Compare the user's input with the stored password
+    if user_one == passcode:
+        print("Logged in successfully")
+        break  # Exit the loop when the password is correct
+    else:
+        print("Incorrect password")
+
+# Key difference between the two versions:
+
+# In the first version:
+# if user_one == "Myaceacademy":
+# This uses a hardcoded password string.
+# The variable 'passcode' is never used.
+
+# In the second version:
+# if user_one == passcode:
+# This uses the value stored in the 'passcode' variable.
+
+# This is better because if we want to change the password later,
+# we only need to update one line:
+# passcode = "NewPassword123"
+
+# NOTE:
+# In the first version, even if we change:
+# passcode = "NewPassword123"
+# the program will still check against "Myaceacademy"
+# because the passcode variable is not being used.
+
+# In the second version, the program automatically checks
+# whatever value is currently stored in the passcode variable.
+# This makes the code easier to maintain and less error-prone.
