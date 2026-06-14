@@ -62,3 +62,20 @@ elif number <0 :
     print("Negative number")
 else:
     print("Zero")
+
+# checking whether a number is positive, negative or zero
+# the program keeps asking for input until the user enters 999 to quit
+
+while True:
+    number = int(input("Enter the number to check if the number is positive negative or zero (999 to quit): "))
+
+    if number == 999:
+        print("Program ended")
+        break
+
+    if number > 0:
+        print("Positive number")
+    elif number < 0:
+        print("Negative number")
+    else:
+        print("Zero")
