@@ -79,3 +79,16 @@ while True:
         print("Negative number")
     else:
         print("Zero")
+
+# Checking even or odd number
+
+num = 8
+
+# % gives the remainder.
+if num % 2 == 0:  
+    print("Even Number")
+else:
+    print("Odd Number")
+
+# If remainder is 0 the number is even.
+# Otherwise it is odd.
