@@ -164,3 +164,20 @@ for letter in word:
     print(letter)
 
 # each character is stored in letter one by one
+
+# Using enumerate()
+
+languages = ["Python", "Java", "C++"]
+
+for index, language in enumerate(languages):
+    print(index, language)
+
+# enumerate() gives both index and value
+
+
+# Using enumerate() starting from 1
+
+for index, language in enumerate(languages, 1):
+    print(index, language)
+
+# starts counting from 1 instead of 0
