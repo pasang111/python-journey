@@ -145,3 +145,22 @@ for even in range(2, 11, 2):
 # start from 2
 # stop before 11
 # move 2 steps each time
+
+# Counting backwards
+
+for count in range(5, 0, -1):
+    print(count)
+
+# start from 5
+# stop before 0
+# move backwards by 1
+
+
+# Looping through a string
+
+word = "Python"
+
+for letter in word:
+    print(letter)
+
+# each character is stored in letter one by one
