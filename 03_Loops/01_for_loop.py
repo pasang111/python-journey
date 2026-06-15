@@ -181,3 +181,13 @@ for index, language in enumerate(languages, 1):
     print(index, language)
 
 # starts counting from 1 instead of 0
+
+# Using zip()
+
+names = ["Ace", "Snow", "Pasang"]
+ids = [101, 102, 103]
+
+for name, student_id in zip(names, ids):
+    print(name, student_id)
+
+# zip() combines both lists together position by position
