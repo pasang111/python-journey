@@ -119,3 +119,29 @@ for word in words:
 # If the first letter is a, e, i, o, or u,
 # the word starts with a vowel.
 # Otherwise it starts with a consonant.
+
+# Looping through a range
+
+for number in range(5):
+    print(number)
+
+# range(5) generates numbers from 0 to 4
+
+
+# Counting from 1 to 5
+
+for number in range(1, 6):
+    print(number)
+
+# start = 1
+# stop = 6 (6 is not included)
+
+
+# Finding even numbers
+
+for even in range(2, 11, 2):
+    print(even)
+
+# start from 2
+# stop before 11
+# move 2 steps each time
