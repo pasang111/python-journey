@@ -125,3 +125,15 @@ introduce(age=20, name="Ace")
 
 # Here Python matches by parameter name,
 # so order does not matter.
+
+# Returning a string
+
+def full_name(first_name, last_name):
+    return first_name + " " + last_name
+
+result = full_name("Ace", "Snow")
+
+print(result)
+
+# The function combines two strings
+# and returns the full name.
