@@ -7,6 +7,23 @@
 # Argument = actual value passed while calling the function
 
 
+# Multiple parameters
+
+def student(name, age):
+    print(name, age)
+
+student("Ace", 20)
+student("Snow", 21)
+
+# The first argument goes into the first parameter (name).
+# The second argument goes into the second parameter (age).
+
+# Example:
+# student("Ace", 20)
+# name = "Ace"
+# age = 20
+
+
 # Positional arguments
 
 def greet(name):
@@ -19,8 +36,7 @@ greet("Ace")
 greet("Snow")
 
 # Python matches arguments based on position.
-# The first value goes into the first parameter.
-# The second value goes into the second parameter.
+# The value passed is assigned to the parameter in order.
 
 
 # Default arguments
