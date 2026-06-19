@@ -75,3 +75,28 @@ discount = float(input("Enter the discount percentage: "))
 final_price = apply_discount(price, discount)
 
 print("Final price after discount:", final_price)
+
+
+#tax calculator
+
+def calculator_tax(price, tax_percentage):
+    if not isinstance(price,(int, float)):
+        return "Price must be a number"
+    
+    if not isinstance(tax_percentage,(int, float)):
+        return "Tax percentage must be a number"
+    
+    if price < 0:
+        print("Price cannot be negative")
+    
+    if tax_percentage < 0:
+        print("Tax percentage cannot be negative")
+    
+    return price + (price * tax_percentage / 100)
+
+price = float(input("Enter product price: "))
+tax = float(input("Enter tax percentage: "))
+
+final_price = calculator_tax(price,tax)
+
+price("Final price with tax:", final_price)
