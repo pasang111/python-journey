@@ -100,3 +100,28 @@ tax = float(input("Enter tax percentage: "))
 final_price = calculator_tax(price,tax)
 
 price("Final price with tax:", final_price)
+
+
+#grade calculator
+
+def calculate_grade(marks):
+    if marks < 0 or marks > 100:
+        return "Marks should be between 0 and 100"
+    
+    if marks >=80:
+        print("Grade A")
+    
+    if marks >=60:
+        print("Grade B")
+    
+    if marks >=40:
+        print("Grade C")
+    
+    else:
+        return "Grade F"
+
+marks = int(input("Please Enter your marks: ")) # ask the user to input their marks
+
+result = calculate_grade(marks) #call the function and store the returned value in result
+
+print(result) #Display the returned value
