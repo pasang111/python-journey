@@ -1,5 +1,4 @@
-                                                # day 9 method to use the list
-
+                                                    #Starting of the List in Python
 #in this lesson we will continue to learn about lists and some common methods associated with them like  append(), pop(), and sort()
 
 #first append() , it is used to add item to the end of the list. for eg
