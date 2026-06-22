@@ -6,4 +6,4 @@ def convert_temperature(celsius):
 celsius = float(input("Enter temperature in Celsius: "))
 
 fahrenheit = convert_temperature(celsius)
-print("Temperature in fahrenheit:", fahrenheit)
+print("Temperature in fahrenheit:", fahrenheit) #printing the msg
