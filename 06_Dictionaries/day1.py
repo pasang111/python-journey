@@ -40,3 +40,27 @@ print(students["class"])
 # Example:
 # "name": "John"
 # key   : value
+
+#Let's see one simple example again of dictionaries
+
+
+#NOTE: while declaring dictonaries we use (=) sign for assigning the value inside the dictionaries
+libraries = {
+    "book1" : "Harry Potter", #NOTE: Use (:) also dont forget (,) after finishing declaring the value in it
+    "book2" : "Elden's Ring",
+    "book3" : "The Record Of Ragnarok",
+    "book4" : "The early rise of the bird",
+    "book5" : "The litle fighter 2",
+    "book6" : "The record of the kings and the knights"
+}
+
+print(libraries)
+
+#now lets say i want to see what's in the book 3 we do
+# print(libraries("book3")) # haha did error here dont use () we use [] while calling the object from the dictionaries
+print(libraries["book3"]) # so the thing is we only get the value of book 3 not let's say i want to print with book 3 : "The Record of Ragnarok "
+# we do
+print("book3: ", libraries["book3"]) # so simple lets say we want to do the same for book 5 what we do?
+#same as above example
+#let's say i want to print "The book name is...""
+print("The book name is: ", libraries["book5"])
