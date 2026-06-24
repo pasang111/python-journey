@@ -64,3 +64,38 @@ print("book3: ", libraries["book3"]) # so simple lets say we want to do the same
 #same as above example
 #let's say i want to print "The book name is...""
 print("The book name is: ", libraries["book5"])
+
+#So here's the thing there is difference in 
+# Difference between student = {} and student = dict()
+
+# 1) Using {}
+# This is the most common and recommended way to create a dictionary.
+# It directly creates an empty dictionary.
+
+student = {}
+print(student)  # Output: {}
+
+# We can then add key-value pairs like this:
+student["name"] = "John"
+student["age"] = 20
+
+print(student)  # Output: {'name': 'John', 'age': 20}
+
+
+# 2) Using dict()
+# This also creates an empty dictionary, but uses the dict() constructor.
+
+student = dict()
+print(student)  # Output: {}
+
+# We can also add key-value pairs in the same way:
+student["name"] = "John"
+student["age"] = 20
+
+print(student)  # Output: {'name': 'John', 'age': 20}
+
+
+# Key idea:
+# Both {} and dict() create an empty dictionary.
+# {} is shorter and more commonly used.
+# dict() is useful in special cases like converting other data structures.
