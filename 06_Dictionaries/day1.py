@@ -99,3 +99,7 @@ print(student)  # Output: {'name': 'John', 'age': 20}
 # Both {} and dict() create an empty dictionary.
 # {} is shorter and more commonly used.
 # dict() is useful in special cases like converting other data structures.
+
+
+#another alternative way to use dictionaries is
+pizza = dict([('name', 'Margherita Pizza'), ('price', 8.9), ('calories_per_slice', 250), ('toppings', ['mozzarella', 'basil'])])
