@@ -103,3 +103,12 @@ print(student)  # Output: {'name': 'John', 'age': 20}
 
 #another alternative way to use dictionaries is
 pizza = dict([('name', 'Margherita Pizza'), ('price', 8.9), ('calories_per_slice', 250), ('toppings', ['mozzarella', 'basil'])])
+
+products = {
+    'Laptop': 990,
+    'Smartphone': 600,
+    'Tablet': 250,
+    'Headphones': 70,
+}
+print(products)
+print(products["Laptop"])
