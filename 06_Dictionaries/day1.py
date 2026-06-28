@@ -112,3 +112,31 @@ products = {
 }
 print(products)
 print(products["Laptop"])
+
+
+# 1. Creating a dictionary
+user_profile = {
+    "username": "coder_99",
+    "email": "coder99@example.com",
+    "joined_year": 2024,
+    "is_active": True
+}
+
+# 2. Accessing a value using its key
+print(user_profile["username"])      # Output: coder_99
+
+# 3. Accessing safely using .get() (prevail errors if key doesn't exist)
+print(user_profile.get("age", 25))   # Output: 25 (returns default value)
+
+# 4. Adding a new key-value pair
+user_profile["country"] = "Canada"
+
+# 5. Modifying an existing value
+user_profile["is_active"] = False
+
+# 6. Removing a key-value pair
+del user_profile["joined_year"]
+
+# Print the final dictionary
+print(user_profile)
+# Output: {'username': 'coder_99', 'email': 'coder99@example.com', 'is_active': False, 'country': 'Canada'}
