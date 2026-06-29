@@ -163,3 +163,14 @@ phone_book[name] = phone
 
 print("\nPhone Book")
 print(phone_book)
+
+# Dictionary to store subject marks
+
+marks = {}
+
+marks["English"] = int(input("Enter English marks: "))
+marks["Math"] = int(input("Enter Math marks: "))
+marks["Science"] = int(input("Enter Science marks: "))
+
+print("\nStudent Marks")
+print(marks)
