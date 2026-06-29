@@ -140,3 +140,14 @@ del user_profile["joined_year"]
 # Print the final dictionary
 print(user_profile)
 # Output: {'username': 'coder_99', 'email': 'coder99@example.com', 'is_active': False, 'country': 'Canada'}
+
+# Dictionary using user input
+
+student = {}
+
+student["Name"] = input("Enter your name: ")
+student["Age"] = input("Enter your age: ")
+student["Course"] = input("Enter your course: ")
+
+print("\nStudent Details")
+print(student)
