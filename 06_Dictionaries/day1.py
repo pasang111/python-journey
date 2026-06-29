@@ -151,3 +151,15 @@ student["Course"] = input("Enter your course: ")
 
 print("\nStudent Details")
 print(student)
+
+# Simple phone book using dictionary
+
+phone_book = {}
+
+name = input("Enter your name: ")
+phone = input("Enter your phone number: ")
+
+phone_book[name] = phone
+
+print("\nPhone Book")
+print(phone_book)
