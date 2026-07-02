@@ -201,3 +201,11 @@ for product in products:
 # Smartphone
 # Tablet
 # Headphones
+
+for product in products.items():
+    print(product)
+# ('Laptop', 990)
+# ('Smartphone', 600)
+# ('Tablet', 250)
+# ('Headphones', 70)
+
