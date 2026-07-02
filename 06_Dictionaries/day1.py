@@ -174,3 +174,30 @@ marks["Science"] = int(input("Enter Science marks: "))
 
 print("\nStudent Marks")
 print(marks)
+
+# technique to loop over a dictionary
+products = {
+    'Laptop': 990,
+    'Smartphone': 600,
+    'Tablet': 250,
+    'Headphones': 70,
+}
+for price in products.values():
+    print(price)
+#990
+# 600
+# 250
+# 70
+
+for product in products.keys():
+    print(product)
+
+# Or
+
+for product in products:
+    print(product)
+
+# Laptop
+# Smartphone
+# Tablet
+# Headphones
