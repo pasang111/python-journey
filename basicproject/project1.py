@@ -14,3 +14,4 @@ while True:
         time.sleep(0.5)
 
     print("\nBro, just Google it. 💀\n")
+    print("\nBro, you nub. 💀\n")
