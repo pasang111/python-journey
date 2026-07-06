@@ -15,3 +15,4 @@ while True:
 
     print("\nBro, just Google it. 💀\n")
     print("\nBro, you nub. 💀\n")
+    print("\nDo it your self. 💀\n")
