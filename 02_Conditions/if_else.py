@@ -129,6 +129,7 @@ while True:
         break  # Exit the loop when the password is correct
     else:
         print("Incorrect password")
+#basic example
 
 # Key difference between the two versions:
 
