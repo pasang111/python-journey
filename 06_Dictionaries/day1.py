@@ -216,3 +216,14 @@ for product, price in products.items():
 # Smartphone 600
 # Tablet 250
 # Headphones 70
+# Create a dictionary representing a user profile
+user_profile = {
+    "username": "coder_jake",
+    "email": "jake@example.com",
+    "joined_year": 2024,
+    "is_active": True
+}
+
+# Print the entire dictionary
+print(user_profile)
+# Output: {'username': 'coder_jake', 'email': 'jake@example.com', 'joined_year': 2024, 'is_active': True}
