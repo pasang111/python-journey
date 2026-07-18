@@ -13,3 +13,11 @@ for price in products.values():
 # 600
 # 250
 # 70
+
+for product in products.keys():
+    print(product)
+
+# Or
+
+for product in products:
+    print(product)
