@@ -1,4 +1,3 @@
-# 1. Creating a dictionary
 # Keys are 'brand', 'model', 'year'. Their values follow the colons.
 car_dict = {
     "brand": "Ford",
