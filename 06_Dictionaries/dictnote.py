@@ -14,3 +14,9 @@ for product in enumerate(products):
 # (2, 'Tablet')
 # (3, 'Headphones')
   
+for index, product in enumerate(products):
+    print(index, product)
+
+# if we need to iterate over the values, we can replace products by products.values():
+for price in enumerate(products.values()):
+    print(price)
