@@ -23,5 +23,5 @@ employees["Mike"] = {
     "Department": "Finance"
 }
 
-# Print the updated dictionary
+# Print the updated dictionary.
 print(employees)
