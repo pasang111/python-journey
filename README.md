@@ -1,6 +1,6 @@
 # Python Journey
 
-This repository contains my Python learning progress, practice programs, and small projects.
+This repository contains my Python learning progress, practice programs, and creating small projects.
 
 ## Topics
 
