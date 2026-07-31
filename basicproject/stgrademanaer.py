@@ -55,5 +55,6 @@ while True:
         break
 
     # Handle invalid menu choices
+     # If the user enters an invalid menu option
     else:
         print("Invalid choice.")
