@@ -23,5 +23,5 @@ while True:
     # Print a random answer from the list
     print("\n" + random.choice(responses))
 
-    # Print a blank line for better spacing
+    # It Print a blank line for better spacing
     print()
