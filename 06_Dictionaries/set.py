@@ -22,3 +22,30 @@ set() #set
 # Difference:
 # A set stores only unique values.
 # A dictionary stores key-value pairs, where each key maps to a corresponding value.
+
+# to add value in set we use .add
+#for example
+
+my_set2 = {1,2,34,5,6,7,7,}
+my_set2.add(9) #adds the new value 
+print(my_set2) #never forget to print to see the actual output
+
+#now we learned how to add now for removing just replace .add with .remove
+my_set2.remove(1) #remove 1 from the set
+print(my_set2)
+
+#now for discard
+my_set2.discard(34)
+print(my_set2)
+
+#NOTE : SO whats the difference between .remove and .discard in the above example
+#.remove will show KeyError if the element is not found
+#but
+#.discard will not show any KeyError if the element is not found
+
+#for example
+my_set2.remove(56)#value which is not in the element
+print(my_set2)
+
+my_set2.discard(90)#also not in the elements
+print(my_set2)
