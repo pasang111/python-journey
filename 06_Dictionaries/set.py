@@ -49,3 +49,8 @@ print(my_set2)
 
 my_set2.discard(90)#also not in the elements
 print(my_set2)
+
+#.clear helps to remove all the elements from the set
+my_set2.clear()
+print(my_set2) 
+
