@@ -28,6 +28,14 @@ set() #set
 
 my_set2 = {1,2,34,5,6,7,7,}
 my_set2.add(9) #adds the new value 
+
+# We are also checking if my_set is a superset of your_set. This is also False because my_set does not have all the elements of your_set:
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+print(your_set.issubset(my_set)) # False
+print(my_set.issuperset(your_set)) # False
+
 print(my_set2) #never forget to print to see the actual output
 
 #now we learned how to add now for removing just replace .add with .remove
