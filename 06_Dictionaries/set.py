@@ -62,3 +62,21 @@ print(my_set2)
 my_set2.clear()
 print(my_set2) 
 
+# Python sets also have powerful methods that perform common mathematical set operations.
+
+# The .issubset() and the .issuperset() methods check if a set is a subset or superset of another set, respectively.
+
+# Here, we are checking if your_set is a subset of my_set, which is False because not all the elements of your_set are in my_set.
+
+# We are also checking if my_set is a superset of your_set. This is also False because my_set does not have all the elements of your_set:
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+print(your_set.issubset(my_set)) # False
+print(my_set.issuperset(your_set)) # False
+
+# The .isdisjoint() method checks if two sets are disjoint,
+# which means they don't have any elements in common. In this case, 
+# that's False because my_set and your_set do have common elements – 2, 3, and 4:
+
+print(my_set.isdisjoint(your_set)) # False
