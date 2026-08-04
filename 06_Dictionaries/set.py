@@ -74,3 +74,9 @@ your_set = {2, 3, 4, 6}
 
 print(your_set.issubset(my_set)) # False
 print(my_set.issuperset(your_set)) # False
+
+# The .isdisjoint() method checks if two sets are disjoint,
+# which means they don't have any elements in common. In this case, 
+# that's False because my_set and your_set do have common elements – 2, 3, and 4:
+
+print(my_set.isdisjoint(your_set)) # False
