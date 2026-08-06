@@ -27,7 +27,12 @@ set() #set
 #for example
 
 my_set2 = {1,2,34,5,6,7,7,}
-my_set2.add(9) #adds the new value 
+my_set2.add(9) #adds the new value
+
+# The .isdisjoint() method checks if two sets are disjoint, which means they don't have any elements in common. 
+# In this case, that's False because my_set and your_set do have common elements – 2, 3, and 4:
+
+print(my_set.isdisjoint(your_set)) # False
 
 # We are also checking if my_set is a superset of your_set. This is also False because my_set does not have all the elements of your_set:
 my_set = {1, 2, 3, 4, 5}
