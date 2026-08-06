@@ -85,3 +85,10 @@ print(my_set.issuperset(your_set)) # False
 # that's False because my_set and your_set do have common elements – 2, 3, and 4:
 
 print(my_set.isdisjoint(your_set)) # False
+
+# The union operator | returns a new set with all the elements from both sets:
+
+my_set | your_set # {1, 2, 3, 4, 5, 6}
+
+# The intersection operator & returns a new set with only the elements that the sets have in common:
+my_set & your_set # {2, 3, 4}
