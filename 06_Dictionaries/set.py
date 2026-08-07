@@ -92,3 +92,8 @@ my_set | your_set # {1, 2, 3, 4, 5, 6}
 
 # The intersection operator & returns a new set with only the elements that the sets have in common:
 my_set & your_set # {2, 3, 4}
+
+# he symmetric difference operator ^ returns a new set with the elements that are either in the first or the second set, but not both. 
+# In this case, 1 and 5 are in my_set but not in your_set, so they are included. And the number 6 is in your_set but not in my_set, so it's included as well:
+
+my_set ^ your_set # {1, 5, 6}
