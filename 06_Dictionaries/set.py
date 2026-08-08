@@ -97,3 +97,44 @@ my_set & your_set # {2, 3, 4}
 # In this case, 1 and 5 are in my_set but not in your_set, so they are included. And the number 6 is in your_set but not in my_set, so it's included as well:
 
 my_set ^ your_set # {1, 5, 6}
+
+#q.a for set
+# Which of the following is a core characteristic of Python sets?
+
+
+# Elements are ordered and accessed by index.
+
+# Elements are stored as key-value pairs.
+
+# Elements are unique and unordered.
+# Correct!
+
+
+# # Elements can be of any data type, including lists and dictionaries.
+
+# 2 What operator is used to check if an element is present in a set?
+
+
+# ==
+
+# in
+# Correct!
+
+
+# get()
+
+# find()
+
+# Which set operation returns a new set with the elements that are present in either one of the two sets, but not in both of them?
+
+# Which set operation returns a new set with the elements that are present in either one of the two sets, but not in both of them?
+
+
+# Union
+
+# Intersection
+
+# Difference
+
+# Symmetric Difference
+# Correct!
