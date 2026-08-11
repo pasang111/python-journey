@@ -37,3 +37,42 @@
 
 # import module_name as module_alias
 # This is often used to shorten long module names, or to avoid naming conflicts.
+
+# For example, to refer to the math module as m in your code, you can assign an alias to it, like this:
+
+# import math as m 
+# Then, you can access the elements of the module using the alias:
+
+# m.sqrt(36)
+# But sometimes you don't need to import everything from a module. Perhaps you only need one or two specific functions or classes. Python has exactly what you need in that case.
+
+# Now the import statement starts with from, followed by the name of the module, and then the import keyword followed by the name of the elements that you want to import:
+
+# from module_name import name1, name2
+# Then, you can use these names without the module prefix in your Python script.
+
+# If you want to assign aliases to these names, you can do that by using the as keyword after each, followed by the alias you want to use:
+
+# from module_name import name1 as alias1, name2 as alias2
+# Let's say that you only want to import the radians, sine, and cosine functions from the math module. You would write:
+
+# from math import radians, sin, cos
+# Now you can call these functions directly in your code, without the math module as a prefix.
+
+# Here we have a more detailed example:
+
+# To find the sine and cosine of a specific angle initially expressed in degrees, we can call the radians function to convert it to radians, and then call the sine and cosine functions, passing the angle in radians:
+
+# from math import radians, sin, cos
+
+# angle_degrees = 40
+# angle_radians = radians(angle_degrees)
+
+# sine_value = sin(angle_radians)
+# cos_value = cos(angle_radians)
+
+# print(sine_value) # 0.6427876096865393
+# print(cos_value)  # 0.766044443118978
+# Notice how we are calling the functions directly, without the name of the module as a prefix. This is because we imported the functions with this alternative syntax.
+
+# This is helpful, but it can result in naming conflicts if you already have functions or variables with the same name defined in the Python script itself. So that's something to keep in mind when choosing which type of import statement you want to use.
