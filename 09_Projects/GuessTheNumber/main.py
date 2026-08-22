@@ -1,9 +1,21 @@
-secret_number = 6
-guess = 0
+SECRET_NUMBER = 6
+guess = None
 
-while guess != secret_number:
-    guess = int(input("Please guess the secret number: "))
-    if guess != secret_number:
-        print("It is not the secret number")
-    else:
-        print("Correct it is the secret number")
+print("Guess the Secret Number!")
+print("Try to guess a number between 1 and 10.")
+
+while guess != SECRET_NUMBER:
+    try:
+        guess = int(input("Enter your guess: "))
+
+        if guess < 1 or guess > 10:
+            print("Please enter a number between 1 and 10.")
+        elif guess < SECRET_NUMBER:
+            print("Too low! Try again.")
+        elif guess > SECRET_NUMBER:
+            print("Too high! Try again.")
+        else:
+            print("Correct! You guessed the secret number.")
+
+    except ValueError:
+        print("Please enter a valid number.")    
