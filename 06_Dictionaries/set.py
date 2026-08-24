@@ -138,3 +138,38 @@ my_set ^ your_set # {1, 5, 6}
 
 # Symmetric Difference
 # Correct!
+
+# .add() adds one element
+my_set = {1, 2, 3}
+my_set.add(4)
+
+print(my_set)
+# {1, 2, 3, 4}
+
+
+# .update() adds multiple elements
+my_set.update([5, 6, 7])
+
+print(my_set)
+# {1, 2, 3, 4, 5, 6, 7}
+
+.add()      # adds one element
+.update()   # adds multiple elements
+
+my_set = {1, 2, 3, 4}
+
+my_set.pop()
+
+print(my_set)
+
+my_set = {1, 2, 3, 4, 5}
+
+print(len(my_set))
+# 5
+
+numbers = [1, 2, 2, 3, 3, 4, 4]
+
+numbers = set(numbers)
+
+print(numbers)
+# {1, 2, 3, 4}
