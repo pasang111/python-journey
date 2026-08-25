@@ -75,4 +75,57 @@
 # print(cos_value)  # 0.766044443118978
 # Notice how we are calling the functions directly, without the name of the module as a prefix. This is because we imported the functions with this alternative syntax.
 
-# This is helpful, but it can result in naming conflicts if you already have functions or variables with the same name defined in the Python script itself. So that's something to keep in mind when choosing which type of import statement you want to use.
+# You can add this section at the end to cover module types, useful import patterns, __name__, and best practices. I’d also slightly clarify that from ... import ... can create naming conflicts.
+
+# Additional Python Module Notes
+# More About Python Modules
+# Python modules are not limited to built-in modules. You can also create your own modules by putting Python code inside a .py file. Any Python file can act as a module, and you can import it into another Python file.
+# For example, suppose we have a file called calculator.py:
+# def add(a, b):
+# return a + b
+# def subtract(a, b):
+# return a - b
+# We can import this module into another Python file:
+# import calculator
+# print(calculator.add(10, 5))
+# print(calculator.subtract(10, 5))
+# This allows us to organize our code into separate files instead of putting everything into one large Python script.
+# Python modules can generally come from three places:
+# 1. The Python standard library
+# 2. Third-party packages installed separately
+# 3. Modules that you create yourself
+# The standard library comes with Python, so modules such as math, random, datetime, os, and json can be imported without installing anything extra.
+# Third-party packages are created by other developers and usually need to be installed before you can use them. Examples include requests, pandas, and numpy.
+# You can also import multiple modules in the same Python file:
+# import math
+# import random
+# import datetime
+# You can use each module with dot notation:
+# print(math.sqrt(25))
+# print(random.randint(1, 10))
+# print(datetime.datetime.now())
+# You can also import multiple names from the same module:
+# from math import sqrt, pi
+# print(sqrt(49))
+# print(pi)
+# Python also provides a special __name__ variable. When a Python file is run directly, its __name__ value is "__main__". When the same file is imported as a module, its __name__ usually becomes the name of the module.
+# Because of this, you will often see:
+# if name == "main":
+# print("This file is being run directly.")
+# This is useful when you want some code to run only when the file is executed directly, but not when the file is imported into another program.
+# For example:
+# def greet():
+# print("Hello!")
+# if name == "main":
+# greet()
+# If we run this file directly, greet() will be called. But if another file imports this module, the greet() function will be available without automatically calling it.
+# Another useful concept is the wildcard import:
+# from math import *
+# This imports many names from the math module directly into your program. However, this style is generally discouraged because it can make it difficult to know where a particular function or variable came from and can cause naming conflicts.
+# For example, using:
+# import math
+# print(math.sqrt(25))
+# makes it clear that sqrt() comes from the math module.
+# In general, using import module_name is often a good choice because it keeps your code readable and makes the source of functions and classes obvious.
+# You should also avoid giving your Python files the same names as standard library modules. For example, naming your own file random.py or math.py can cause import problems because Python may try to import your file instead of the standard library module.
+# The main idea is that modules help us organize, reuse, and maintain our Python code. Instead of writing the same functionality again and again, we can place related code inside a module and import it whenever we need it.
