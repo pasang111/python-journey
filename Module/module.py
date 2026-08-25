@@ -10,7 +10,6 @@
 # The random module is helpful for generating random numbers.
 
 # The re module is used for working with regular expressions.
-
 # And the datetime module is helpful for working with dates and times in Python.
 
 # But how can you access the variables, constants, functions, and classes defined in these built-in modules?
