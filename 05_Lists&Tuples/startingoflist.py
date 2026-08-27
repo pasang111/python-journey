@@ -38,8 +38,8 @@ print(poo1)
 
                                 #!!!!!!!!!! NOTE: Now we learned about append now we will learn about extend 
                                                 # extend will add all the value as a one like 
-                                                    #in append if we use append it will create list inside list nested
-                                                #but in extend it won't create nested instead will add all value
+                                         #in append if we use append it will create list inside list nested
+                                           #but in extend it won't create nested instead will add all value
 #for eg 
 
 lk = ["PASANGISGREAT","PASANGISGREAT2","PASANGISGREAT3"]
