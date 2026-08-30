@@ -4,4 +4,5 @@ def introduce():
     course = "Learning python"
     print(student + " " +course)
 
-introduce()
+def say_goodbye():
+    print("Goodbye!")
