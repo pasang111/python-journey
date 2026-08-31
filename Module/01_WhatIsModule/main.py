@@ -1,8 +1,11 @@
-# Import the hello module and give it a shorter name "h"
-import hello as h
+# Import the introduce function from the hello module
+from hello import introduce
 
-# Go to the hello module and use the introduce() function
-h.introduce()
+# Import the say_goodbye function from the hello module
+from hello import say_goodbye
 
-# Go to the hello module and use the say_goodbye() function
-h.say_goodbye()
+# Call the introduce function
+introduce()
+
+# Call the say_goodbye function
+say_goodbye()   
