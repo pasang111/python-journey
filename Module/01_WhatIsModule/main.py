@@ -1,11 +1,6 @@
-# Import the introduce function from the hello module
-from hello import introduce
+# Import functions with aliases
+from calculator import add as addition, subtract as minus
 
-# Import the say_goodbye function from the hello module
-from hello import say_goodbye
-
-# Call the introduce function
-introduce()
-
-# Call the say_goodbye function
-say_goodbye()   
+# Use the imported functions
+print(addition(10, 5))
+print(minus(10, 5))
