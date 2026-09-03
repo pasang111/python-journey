@@ -11,3 +11,10 @@ from message import welcome as start, study as learn
 # Call the functions using their aliases
 start()
 learn()
+import math_utils
+
+result = math_utils.add(3, 5)
+print(result)  # 8
+
+result2 = math_utils.square(4)
+print(result2)  # 16
