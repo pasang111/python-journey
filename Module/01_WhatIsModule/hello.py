@@ -1,8 +1,5 @@
-def introduce():
-    
-    student = "pasang lama"
-    course = "Learning python"
-    print(student + " " +course)
+student = "Pasang Lama"
+course = "Python"
 
-def say_goodbye():
-    print("Goodbye!")
+def introduce():
+    print(student + " is learning " + course)
