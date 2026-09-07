@@ -1,3 +1,4 @@
+import re
 # a list that holds patient information as dictionaries
 medical_records = [
     {
@@ -33,6 +34,13 @@ medical_records = [
         'last_visit_id': 'V2304',
     }
 ]
+def find_invalid_records(
+    patient_id, age, gender, diagnosis, medications, last_visit_id
+):
+    constraints = {
+        'patient_id': isinstance(patient_id, str)
+    }
+    return constraints
 
 # function that checks if the data structure is correct
 def validate(data):
@@ -57,6 +65,12 @@ def validate(data):
             print(f'Invalid format: expected a dictionary at position {index}.')
             is_invalid = True
 
+        if set(dictionary.keys()) != key_set:
+            print(
+                f'Invalid format: {dictionary} at position {index} has missing and/or invalid keys.'
+            )
+            is_invalid = True
+
     # if any item was not a dict, return False
     if is_invalid:
         return False
@@ -67,3 +81,4 @@ def validate(data):
 
 # run the validation on the medical records
 validate(medical_records)   
+print(find_invalid_records(**medical_records[0]))
