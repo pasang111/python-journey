@@ -1,4 +1,5 @@
 import re
+
 # a list that holds patient information as dictionaries
 medical_records = [
     {
@@ -34,13 +35,40 @@ medical_records = [
         'last_visit_id': 'V2304',
     }
 ]
+
+
+# function that checks each patient record for invalid values
 def find_invalid_records(
     patient_id, age, gender, diagnosis, medications, last_visit_id
 ):
+    # create a dictionary containing validation results
     constraints = {
+        # check that patient_id is a string and matches the correct pattern
         'patient_id': isinstance(patient_id, str)
+        and re.fullmatch('p\d+', patient_id, re.IGNORECASE),
+
+        # check that age is an integer and is at least 18
+        'age': isinstance(age, int) and age >= 18,
+
+        # check that gender is either male or female
+        'gender': isinstance(gender, str)
+        and gender.lower() in ('male', 'female'),
+
+        # check that diagnosis is a string or None
+        'diagnosis': isinstance(diagnosis, str) or diagnosis is None,
+
+        # check that medications is a list containing only strings
+        'medications': isinstance(medications, list)
+        and all([isinstance(i, str) for i in medications]),
+
+        # check that last_visit_id matches the correct pattern
+        'last_visit_id': isinstance(last_visit_id, str)
+        and re.fullmatch('v\d+', last_visit_id, re.IGNORECASE)
     }
-    return constraints
+
+    # return a list containing the keys with invalid values
+    return [key for key, value in constraints.items() if not value]
+
 
 # function that checks if the data structure is correct
 def validate(data):
@@ -64,11 +92,24 @@ def validate(data):
         if not isinstance(dictionary, dict):
             print(f'Invalid format: expected a dictionary at position {index}.')
             is_invalid = True
+            continue
 
+        # check if the dictionary has exactly the required keys
         if set(dictionary.keys()) != key_set:
             print(
                 f'Invalid format: {dictionary} at position {index} has missing and/or invalid keys.'
             )
+            is_invalid = True
+            continue
+
+        # find the invalid values in the current dictionary
+        invalid_records = find_invalid_records(**dictionary)
+
+        # loop through each invalid key
+        for key in invalid_records:
+            # print the invalid key, value, and position
+            print(f"Unexpected format '{key}: {dictionary[key]}' at position {index}.")
+            # mark the data as invalid
             is_invalid = True
 
     # if any item was not a dict, return False
@@ -79,6 +120,9 @@ def validate(data):
     print('Valid format.')
     return True
 
+
 # run the validation on the medical records
-validate(medical_records)   
+validate(medical_records)
+
+# test the find_invalid_records function with the first medical record
 print(find_invalid_records(**medical_records[0]))
