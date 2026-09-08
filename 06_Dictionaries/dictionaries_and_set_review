@@ -1,0 +1,112 @@
+                                                    Dictionaries and Sets Review
+Dictionary = a data structure that stores key-value pairs.
+for eg
+dictionary = {
+    key: value,
+    key: value
+}
+for example:
+person = {
+    "name": "John",
+    "age": 20
+}
+Key → used to identify/access the value.
+Value → the data stored for that key.
+
+Dictionary Keys
+Dictionary keys must be immutable.
+Valid keys:
+str
+int
+float
+tuple
+
+Invalid key:
+list (because lists are mutable)
+
+Common Dictionary Methods
+get() Method: The get() method retrieves the value associated with a key. It's similar to the bracket notation, but it lets you set a default value, preventing errors if the key doesn't exist.
+
+example code for the above definition
+
+pizza = {
+    'name': 'Margherita Pizza',
+    'price': 8.9,
+    'calories_per_slice': 250
+}
+
+pizza.keys()
+# dict_keys(['name', 'price', 'calories_per_slice'])
+
+pizza.values()
+# dict_values(['Margherita Pizza', 8.9, 250])
+
+items() Method: items() → gives you both the keys AND their values.
+
+pizza.items()
+# dict_items([('name', 'Margherita Pizza'), ('price', 8.9), ('calories_per_slice', 250)])
+
+clear() Method: The clear() method removes all the key-value pairs from the dictionary.
+#pizza.clear()
+
+pop() Method: The pop() method removes the key-value pair with the key specified as the first argument and returns its value.
+for eg : pizza.pop('price', 10)
+
+pop() Method: The pop() method removes the key-value pair with the key specified as the first argument and returns its value.
+for eg: pizza.pop('total_price') # KeyError
+
+pop.item() it does remove the last items
+suppose:
+pizza = {
+    "name": "Margherita",
+    "price": 8.9,
+    "calories": 250
+}
+pizza.popitem()
+what it does is remove the last key value which is "caloroies" : 25
+
+so the final value will be 
+{
+    "name": "Margherita",
+    "price": 8.9
+}
+NOTE on popitem 
+popitem() = remove the last key-value pair.
+
+You don't tell it which key to remove.  
+
+update() = Add or change items
+
+suppose 
+pizza = {
+    "name": "Margherita",
+    "price": 8.9
+}
+
+then
+pizza.update({
+    "price": 15,
+    "total_time": 25
+})
+Python looks at each item:
+
+"price": 15
+price already exists, so Python changes its value:
+
+8.9 → 15
+
+"total_time": 25
+total_time doesn't exist, so Python adds it.
+
+Now:
+
+{
+    "name": "Margherita",
+    "price": 15,
+    "total_time": 25
+}
+
+easy final note
+pop()       → remove a specific key
+popitem()   → remove the last item
+update()    → change existing items or add new items
