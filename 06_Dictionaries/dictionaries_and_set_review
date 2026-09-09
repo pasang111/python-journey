@@ -110,3 +110,177 @@ easy final note
 pop()       → remove a specific key
 popitem()   → remove the last item
 update()    → change existing items or add new items
+
+
+
+looping over a dictionary
+
+Iterating Over Values in a Dictionary
+values() is used to get all the values from a dictionary.
+We can use a for loop to go through each value one by one.
+
+for eg:
+
+products = {
+    'Laptop': 990,
+    'Smartphone': 600,
+    'Tablet': 250,
+    'Headphones': 70,
+}
+
+for price in products.values():
+    print(price)    
+
+output:
+990
+600
+250
+70
+
+Iterating Over Keys
+
+keys() is used to get all the keys from a dictionary.
+We can use a for loop to go through each key one by one.
+We can write either products.keys() or simply products.
+Example:
+
+for product in products.keys():
+    print(product)
+
+# Or
+
+for product in products:
+    print(product)
+
+output:
+
+Laptop
+Smartphone
+Tablet
+Headphones
+
+Iterating Over Key-Value Pairs
+items() is used to get both keys and values from a dictionary.
+A for loop can go through each key-value pair at the same time.
+Each pair is returned as a tuple (key, value)
+
+for eg:
+for product in products.items():
+    print(product)
+output:
+('Laptop', 990)
+('Smartphone', 600)
+('Tablet', 250)
+('Headphones', 70)
+
+To store the key and value in separate loop variables, you need to separate them with a comma. The first variable stores the key, and the second stores the value.
+
+for eg:
+for product, price in products.items():
+    print(product, price)
+
+Output:
+
+Laptop 990
+Smartphone 600
+Tablet 250
+Headphones 70
+
+Enumerate 
+enumerate()
+
+enumerate() is used when you want to loop through items and also keep a counter (index).
+
+By default, the counter starts from 0.
+
+for eg:
+for index, product in enumerate(products.items()):
+    print(index, product)
+
+output
+0 ('Laptop', 990)
+1 ('Smartphone', 600)
+2 ('Tablet', 250)
+3 ('Headphones', 70)
+
+like if we want to start from value 1 then what we do is given below
+for index, product in enumerate(products.item(), 1):
+    print(product)
+
+output:
+1 ('Laptop', 990)
+2 ('Smartphone', 600)
+3 ('Tablet', 250)
+4 ('Headphones', 70)
+
+Sets
+A set is a collection of values that:
+
+Does not allow duplicates
+Has no fixed order
+Can be changed (mutable)
+You cannot use an index like set[0]
+Can contain immutable types like numbers, strings, and tuples
+
+for eg:
+numbers = {10, 20, 30, 20, 10}
+print(numbers)
+output:
+{10, 20, 30}
+
+defining an empty set
+
+empty_set = set()
+
+set()
+
+#and important note while creating an empty set dont use empty = {}, {} creates an empty dictionary, not a set.
+
+important note:
+{1, 2, 3} = Set
+{} = Empty Dictionary
+set() = Empty Set
+Note: To make an empty set, always use set(). not empty = {} cause its dictionary
+
+Some common set methods
+
+1. add()
+we can add an elements to set with the add() method, passing the new element as an arguments
+example:
+myset.add(6)
+
+2. remove() and discard() method
+the key difference is remove() method will throw keyError while the discard() method wont throw any error
+
+for example:
+my_set.remove(4)
+my_set.discard(4)
+
+3. clear()
+what clear method does is clear all the elements from the set
+my_set.clear()
+
+Mathematical Set Operations
+
+issubset() and issuperset()
+This method are used to compare two sets
+
+issubset()
+check if all items of one set are present in another set
+example:
+
+A = {1, 2}
+B = {1, 2, 3, 4}
+
+print(A.issubset(B))
+
+output: True
+
+issuperset()    
+
+A = {1, 2, 3, 4}
+B = {1, 2}
+
+print(A.issuperset(B))
+
+True
