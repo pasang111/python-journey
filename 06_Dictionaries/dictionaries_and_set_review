@@ -284,3 +284,726 @@ B = {1, 2}
 print(A.issuperset(B))
 
 True
+
+Subset asks: "Is everything in me inside you?"
+Superset asks: "Do I contain everything inside you?"
+
+
+isdisjoint() Method: The isdisjoint() method checks if two sets are disjoint, if they don't have elements in common.
+my_set = {1, 2, 3}
+your_set = {4, 5, 6}
+
+print(my_set.isdisjoint(your_set)) # True
+
+#why did it print true because there are nothing common in my_set and your_set so
+if my_set and your_set has something in common than it shows false
+
+the real purpose of isdisjoint() is to check whether two sets have zero elements in common.
+
+
+*Union Operator |
+The union operator | returns a new set with all the elements from both sets.
+
+my_set = {1, 2, 3}
+your_set = {4, 5, 6}
+
+my_set | your_set # {1, 2, 3, 4, 5, 6}
+
+my_set = {1, 2, 3}
+your_set = {4, 5, 6}
+
+my_set | your_set # {1, 2, 3, 4, 5, 6}
+
+*Intersection Operator (&): The intersection operator & returns a new set with only the elements that the sets have in common.
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+my_set & your_set # {2, 3, 4}
+
+*Difference Operator (-): The difference operator - returns a new set with the elements of the first set that are not in the other sets.
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+my_set - your_set # {1, 5}
+
+*Symmetric Difference Operator (^): The symmetric difference operator ^ returns a new set with the elements that are either in the first or the second set, but not both.
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+my_set ^ your_set # {1, 5, 6}
+just which is not common
+
+
+*in Operator: You can check if an element is in a set or not with the in operator.
+my_set = {1, 2, 3, 4, 5}
+
+print(5 in my_set) # True
+
+to check if that value really exist in that set or not
+
+                                                Python Standard Library
+
+1. What is a library?
+A library is basically a collection of code that other people have already written so you don't have to write everything yourself.
+
+For example, imagine you want to calculate a square root.
+
+You could write the mathematics yourself, or Python already gives you the math module:
+
+import math
+
+print(math.sqrt(36))
+
+Output:
+
+6.0
+
+Here, math is a module from Python's Standard Library.
+
+Some useful standard-library modules are:
+
+math → mathematical operations
+random → generate random values
+datetime → work with dates and times
+re → regular expressions/text patterns
+
+2. What does import do?
+When you write:
+
+import math
+
+you're basically telling Python:
+
+"I want to use the code that is inside the math module."
+
+Then you can access things from math using a dot (.):
+
+math.sqrt(36)
+
+Think of it like:
+
+module.function()
+   |       |
+  math   sqrt
+
+  so math.sqrt(36)
+Use the sqrt function from the math module.
+
+3. Importing with an alias
+You can give a module a shorter name.
+
+For example:
+
+import math as m
+
+Now instead of:
+
+math.sqrt(36)
+
+you can write:
+
+m.sqrt(36)
+
+The m is an alias (another name).
+
+import math as m
+
+means:
+
+math → m
+
+This is useful when a module has a long name.
+
+
+
+4. Importing specific things
+Suppose you only want the sqrt function from math.
+
+Instead of:
+
+import math
+
+math.sqrt(36)
+
+you can do:
+
+from math import sqrt
+
+sqrt(36)
+
+            Note:
+
+            Notice the difference.
+
+With:
+
+import math
+
+you need:
+
+math.sqrt()
+
+But with:
+
+from math import sqrt
+
+you can directly use:
+
+sqrt()
+
+You can import multiple things
+from math import sqrt, sin, cos
+
+Now you can do:
+
+sqrt(36)
+sin(40)
+cos(40)
+
+without writing math..
+
+Log in
+Sign up for free
+You said:
+
+Symmetric Difference Operator (^): The symmetric difference operator ^ returns a new set with the elements that are either in the first or the second set, but not both.
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+my_set ^ your_set # {1, 5, 6}
+
+explain me this
+
+ChatGPT said:
+Absolutely! Let's break it down very simply.
+
+What does ^ mean for sets?
+In Python, ^ means symmetric difference.
+
+It gives you the elements that are in either set, but NOT in both sets.
+
+You have:
+
+my_set = {1, 2, 3, 4, 5}
+your_set = {2, 3, 4, 6}
+
+Let's compare them:
+
+Element	In my_set?	In your_set?	Keep?
+1	✅	❌	✅
+2	✅	✅	❌
+3	✅	✅	❌
+4	✅	✅	❌
+5	✅	❌	✅
+6	❌	✅	✅
+
+So:
+
+1 → only in my_set → keep
+2 → in both → remove
+3 → in both → remove
+4 → in both → remove
+5 → only in my_set → keep
+6 → only in your_set → keep
+Therefore:
+
+my_set ^ your_set
+
+gives:
+
+{1, 5, 6}
+
+An easy way to remember it
+Think:
+
+^ = "Give me everything that is different between the two sets."
+
+So:
+
+my_set    = {1, 2, 3, 4, 5}
+your_set  = {2, 3, 4, 6}
+
+Common    = {2, 3, 4}  ← remove these
+
+Different = {1, 5, 6}  ← answer
+
+It's similar to XOR (exclusive OR) in logic: one or the other, but not both.
+
+You can also write the same operation as:
+
+my_set.symmetric_difference(your_set)
+
+which produces:
+
+{1, 5, 6}
+
+
+
+You said:
+
+in Operator: You can check if an element is in a set or not with the in operator.
+print(5 in my_set) # True
+
+ChatGPT said:
+Yes! This one is very simple. 😊
+
+What does in mean?
+The in operator checks whether a particular element exists inside a set.
+
+For example:
+
+my_set = {1, 2, 3, 4, 5}
+
+print(5 in my_set)
+
+Python asks:
+
+"Is 5 inside my_set?"
+
+Since 5 is there:
+
+{1, 2, 3, 4, 5}
+             ↑
+             5
+
+The answer is:
+
+True
+
+So the output is:
+
+True
+
+Another example
+print(10 in my_set)
+
+Python asks:
+
+"Is 10 inside my_set?"
+
+10 is not there, so:
+
+False
+
+You can also use not in
+not in checks the opposite:
+
+print(10 not in my_set)
+
+Since 10 is not in the set, the answer is:
+
+True
+
+Remember it like this
+5 in my_set
+
+means:
+
+"Is 5 inside my_set?"
+
+10 not in my_set
+
+means:
+
+"Is 10 NOT inside my_set?"
+
+The result is always a Boolean value: True or False.
+
+
+
+You said:
+
+Python Standard Library
+Python Standard Library: A library gives you pre-written and reusable code, like functions, classes, and data structures, that you can reuse in your projects. Python has an extensive standard library with built-in modules that implement standardized solutions for many problems and tasks. Some examples of popular built-in modules are math, random, re (short for "regular expressions"), and datetime.
+Import Statement
+Import Statement: To access the elements defined in built-in modules, you use an import statement. Import statements are generally written at the top of the file. Import statements work the same for functions, classes, constants, variables, and any other elements defined in the module.
+
+Basic Import Statement: You can use the import keyword followed by the name of the module:
+
+import module_name
+Then, if you need to call a function from that module, you would use dot notation, with the name of the module followed by the name of the function.
+
+module_name.function_name()
+For example, you would write the following in your code to import the math module and get the square root of 36:
+
+import math
+
+math.sqrt(36)
+Importing a Module with a Different Name: If you need to import the module with a different name (also known as an "alias"), you can use as followed by the alias at the end of the import statement. This is often used for long module names or to avoid naming conflicts.
+import module_name as module_alias
+For example, to refer to the math module as m in your code, you can assign an alias like this:
+
+import math as m
+Then, you can access the elements of the module using the alias:
+
+m.sqrt(36)
+Importing Specific Elements: If you don't need everything from a module, you can import specific elements using from. In this case, the import statement starts with from, followed by the module name, then the import keyword, and finally the names of the elements you want to import.
+from module_name import name1, name2
+Then, you can use these names without the module prefix in your Python script. For example:
+
+from math import radians, sin, cos
+
+angle_degrees = 40
+angle_radians = radians(angle_degrees)
+
+sine_value = sin(angle_radians)
+cos_value = cos(angle_radians)
+
+print(sine_value) # 0.6427876096865393
+print(cos_value)  # 0.766044443118978
+This is helpful, but it can result in naming conflicts if you already have functions or variables with the same name. Keep it in mind when choosing which type of import statement you want to use.
+
+If you need to assign aliases to these names, you can do so as well, using the as keyword followed by the alias.
+
+from module_name import name1 as alias1, name2 as alias2
+Import Statement with Asterisk (*): The asterisk tells Python that you want to import everything in that module, but you want to import it so that you don't need to use the name of the module as a prefix.
+from module_name import *
+For example, if you use this to import the math module, you'll be able to call any function defined in that module without specifying the name of the module as a prefix.
+
+from math import *
+print(sqrt(36))  # 6.0
+However, this is generally discouraged because it can lead to namespace collisions and make it harder to know where names come from.
+
+if __name__ == '__main__'
+__name__ Variable: __name__ is a special built-in variable in Python. When a Python file is executed directly, Python sets the value of this variable to the string "__main__". But if the Python file is imported as a module into another Python script, the value of the __name__ variable is set to the name of that module.
+This is why you'll often find this conditional in Python scripts. It contains the code that you only want to run only if the Python script is running as the main program.
+
+if __name__ == '__main__': 
+    # Code
+
+ChatGPT said:
+Sure — this section is introducing Python modules, how to import them, and why you use if __name__ == '__main__'. Let's make it much easier.
+
+1. What is a library?
+A library is basically a collection of code that other people have already written so you don't have to write everything yourself.
+
+For example, imagine you want to calculate a square root.
+
+You could write the mathematics yourself, or Python already gives you the math module:
+
+import math
+
+print(math.sqrt(36))
+
+Output:
+
+6.0
+
+Here, math is a module from Python's Standard Library.
+
+Some useful standard-library modules are:
+
+math → mathematical operations
+random → generate random values
+datetime → work with dates and times
+re → regular expressions/text patterns
+2. What does import do?
+When you write:
+
+import math
+
+you're basically telling Python:
+
+"I want to use the code that is inside the math module."
+
+Then you can access things from math using a dot (.):
+
+math.sqrt(36)
+
+Think of it like:
+
+module.function()
+   ↓       ↓
+  math   sqrt
+
+So:
+
+math.sqrt(36)
+
+means:
+
+Use the sqrt function from the math module.
+
+3. Importing with an alias
+You can give a module a shorter name.
+
+For example:
+
+import math as m
+
+Now instead of:
+
+math.sqrt(36)
+
+you can write:
+
+m.sqrt(36)
+
+The m is an alias (another name).
+
+import math as m
+
+means:
+
+math → m
+
+This is useful when a module has a long name.
+
+4. Importing specific things
+Suppose you only want the sqrt function from math.
+
+Instead of:
+
+import math
+
+math.sqrt(36)
+
+you can do:
+
+from math import sqrt
+
+sqrt(36)
+
+Notice the difference.
+
+With:
+
+import math
+
+you need:
+
+math.sqrt()
+
+But with:
+
+from math import sqrt
+
+you can directly use:
+
+sqrt()
+
+You can import multiple things
+from math import sqrt, sin, cos
+
+Now you can do:
+
+sqrt(36)
+sin(40)
+cos(40)
+
+without writing math..
+
+5. Importing with an alias
+You can also give imported functions different names.
+
+For example:
+
+from math import sqrt as square_root
+
+Now:
+
+print(square_root(36))
+
+Output:
+
+6.0
+
+Here:
+
+sqrt → square_root
+
+6. What does * mean?
+You might see:
+
+from math import *
+
+The * means:
+
+"Import everything from math."
+
+So you can write:
+
+from math import *
+
+print(sqrt(36))
+print(sin(1))
+print(cos(1))
+
+without math..
+
+However, this is generally not recommended.
+
+Why?
+
+Imagine you have your own function:
+
+def sqrt():
+    print("My function")
+
+And then you do:
+
+from math import *
+
+Now you could have a naming conflict because Python has another sqrt.
+
+It's also harder to know where a function came from.
+
+So generally prefer:
+
+import math
+
+math.sqrt(36)
+
+It's clearer.
+
+
+7.  The important part: if __name__ == '__main__'
+This looks scary at first:
+
+if __name__ == '__main__':
+
+But the idea is actually simple.
+
+Python gives every .py file a special variable called:
+
+__name__
+
+Its value depends on how the file is being used.
+
+When you run the file directly
+Suppose you have:
+
+hello.py
+
+and run:
+
+python hello.py
+
+Python sets:
+
+__name__ = "__main__"
+
+Therefore:
+
+if __name__ == '__main__':
+
+becomes:
+
+if True:
+
+So the code inside runs.
+
+
+8. Why is this useful?
+Imagine you have a file called calculator.py:
+
+def add(a, b):
+    return a + b
+
+
+if __name__ == '__main__':
+    print(add(5, 3))
+
+If you run:
+
+python calculator.py
+
+you get:
+
+8
+
+because the file is being run directly.
+
+But another file could import it:
+
+import calculator
+
+print(calculator.add(10, 20))
+
+Output:
+
+30
+
+The important thing is that this code:
+
+if __name__ == '__main__':
+    print(add(5, 3))
+
+does not run when calculator.py is imported.
+
+Only the function definition is imported.
+
+9. Think of it like this
+Imagine calculator.py contains:
+
+def add(a, b):
+    return a + b
+
+print("Calculator started!")
+
+if __name__ == '__main__':
+    print(add(5, 3))
+
+Running it directly:
+python calculator.py
+
+Python sees:
+
+__name__ == '__main__'
+
+So everything runs:
+
+Calculator started!
+8
+
+Importing it:
+import calculator
+
+Python sees that calculator.py is being imported, not directly executed.
+
+Therefore:
+
+__name__ == '__main__'
+
+is False.
+
+So the 8 doesn't get printed.
+
+he big picture
+You can remember the whole section like this:
+
+# 1. Import an entire module
+import math
+
+math.sqrt(36)
+
+# 2. Give module a shorter name
+import math as m
+
+m.sqrt(36)
+
+# 3. Import specific things
+from math import sqrt
+
+sqrt(36)
+
+# 4. Import specific things with aliases
+from math import sqrt as square_root
+
+square_root(36)
+
+# 5. Main program check
+if __name__ == '__main__':
+    print("Run this only when executed directly")
+Most important thing to understand
+import → lets you use code from another module.
+
+. → accesses something inside a module.
+
+as → gives something another name.
+
+from ... import ... → gets specific things from a module.
+
+* → gets everything, but usually avoid it.
+
+if __name__ == '__main__': → runs that code only when the file itself is executed directly, not when it's imported.
