@@ -1007,3 +1007,29 @@ from ... import ... → gets specific things from a module.
 * → gets everything, but usually avoid it.
 
 if __name__ == '__main__': → runs that code only when the file itself is executed directly, not when it's imported.
+
+Additional Note: Module vs Library
+Library → A collection of useful pre-written code.
+Module → A single Python file (.py) containing code such as functions, variables, and classes.
+Package → A collection of related modules.
+Think of it like:
+
+Library
+   ↓
+Package
+   ↓
+Module
+   ↓
+Functions / Classes / Variables
+
+For example:
+
+import math
+
+math.sqrt(36)
+
+Here:
+
+math → module
+sqrt → function inside the module
+36 → argument passed to the function
