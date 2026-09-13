@@ -1,0 +1,39 @@
+                                                    Debugging
+
+Debugging is the process of finding and fixing errors in code. It helps developers understand how their program works and identify problems.
+
+A simple debugging technique is using print() with f-strings to check variable values and program flow.
+
+
+def add(a, b):
+    result = a + b
+    print(f'Adding {a} and {b} gives {result}')
+    return result
+
+Here, print() helps check the values of a, b, and result to make sure the function works correctly.
+
+NOTE: Difference in Debugging and errorhandling
+
+Debugging = Why did this error happen? → Find and fix the cause.
+Error handling = What should I do if this error happens? → Handle it properly.
+
+
+                                    Interactive debugging with the pdb module
+
+Python has a built-in pdb module that helps you debug your code step by step.
+
+for eg:
+
+import pdb
+
+def divide(a, b):
+    pdb.set_trace()
+    return a / b
+
+print(divide(10, 2))
+
+* pdb.set_trace() → pauses the program at that line.
+* You can then check variables, run code step by step, and see what is happening.
+* This helps you understand why your code isn't working.
+
+note : pdb is a debugging tool, not error handling.
