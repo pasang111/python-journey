@@ -37,3 +37,25 @@ print(divide(10, 2))
 * This helps you understand why your code isn't working.
 
 note : pdb is a debugging tool, not error handling.
+
+Python’s debugger, called pdb. A debugger helps you pause your program and inspect what is happening.
+
+1. What does set_trace() do?
+Suppose code looks like this:
+
+def divide(a, b):
+    import pdb
+    pdb.set_trace()
+    return a / b
+
+print(divide(10, 2))
+
+Normally, Python would just run the code and give you:
+
+5.0
+
+But pdb.set_trace() tells Python:
+
+"STOP HERE! I want to check what's happening in the program."
+
+So Python pauses at that line.
