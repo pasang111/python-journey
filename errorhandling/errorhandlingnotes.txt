@@ -33,3 +33,120 @@ num.append(5)
 # AttributeError: 'int' object has no attribute 'append'
 # .append() is a method used with lists.
 # An int does not have an append() method.
+
+
+                                                Python Error Handling
+Python uses exception handling to prevent a program from crashing when an error occurs.
+
+Main keyword
+
+1. try
+
+try = 
+    result = 10/0
+
+2. except
+
+handles the error if occcurs
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+IMPORTANT: ZeroDivisionError is and exeption class..
+
+3. else 
+
+Runs only when no error occurs
+
+try:
+     result = 10\0
+except ZeroDivisionError:
+    print("Error)
+else:
+    print("Success")
+
+4. finally
+
+Runs whether an error occcurs or not
+
+try:
+    result = 10/0
+except ZeroDivisionError:
+    print("Error")
+finally:
+    print("This always runs")
+
+
+5. raise
+
+Used to manually create an exception
+
+for eg:
+
+age = -1
+
+if age < 0:
+    raise ValueError("Age cannot be negative")
+
+6. as - Storing the error
+
+we can store exception in a variable
+
+try:
+    result = 10/0
+except ZeroDivisionError as e:
+    print(e)
+
+here :
+ZeroDivisionError = exception class
+e = variable containing the exception
+
+
+The main IMPORTANT parts of python exception handling are:
+
+try, except, else, finally and raise
+
+try:
+    # code that might cause an error
+except SomeError:
+    # handle the error
+else:
+    # runs if there is no error
+finally:
+    # always runs
+
+
+
+
+1. Error handling
+This is the overall concept.
+
+Exception handling = dealing with errors that happen while a program runs.
+
+                                            keywords used for exception handling
+try
+except
+else
+finally
+raise
+as
+
+                                                Exception types
+ZeroDivisionError
+ValueError
+TypeError
+IndexError
+this tells python what kind of error happened.
+
+so:
+
+try:
+    x = 10/0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+means:
+
+Exception handling → the overall technique
+try / except → keywords used for it
+ZeroDivisionError → type of error
