@@ -20,7 +20,7 @@ print("Final price:", result)
 # Traditional way of using a debugging breakpoint: pdb.set_trace()
 
 import pdb
-
+# from pdb import set_trace as s optional
 def calculate_total(price, quantity):
     discount= 10
     total = price * quantity
