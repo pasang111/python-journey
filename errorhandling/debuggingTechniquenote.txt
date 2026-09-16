@@ -20,6 +20,9 @@ Error handling = What should I do if this error happens? → Handle it properly.
 
                                     Interactive debugging with the pdb module
 
+            Pdb
+            pdb is Python’s built-in debugger. It lets you pause a program, inspect variables, and execute code step by step.
+
 Python has a built-in pdb module that helps you debug your code step by step.
 
 for eg:
@@ -59,3 +62,202 @@ But pdb.set_trace() tells Python:
 "STOP HERE! I want to check what's happening in the program."
 
 So Python pauses at that line.
+
+this is the output from Python's debugger, pdb:
+
+> /Users/fcc/Desktop/debugging.py(5)divide()
+-> return a / b
+(Pdb)
+
+1. > /Users/fcc/Desktop/debugging.py(5)divide()
+This tells you:
+
+/Users/fcc/Desktop/debugging.py → the Python file you're currently debugging.
+
+(5) → you're currently stopped at line 5.
+
+divide() → the function you're currently inside.
+
+
+2. -> return a / b
+This shows the exact line of code where the debugger is paused:
+
+return a / b
+
+The -> means:
+
+"This is the next line Python is about to execute."
+
+For example, if your program is:
+
+def divide(a, b):
+    return a / b
+
+and you use pdb, Python can pause before executing return a / b.
+
+
+3. (Pdb)
+This is the important part.
+
+(Pdb)
+
+means:
+
+Python is waiting for you to enter a debugger command.
+
+You're no longer simply running your program. You can inspect what's happening.
+
+For example, you can type:
+
+(Pdb) p a
+
+to print the value of a.
+
+Or:
+
+(Pdb) p b
+
+to print b.
+
+If you had:
+
+divide(10, 2)
+
+you might see:
+
+(Pdb) p a
+10
+(Pdb) p b
+2
+
+You can then continue executing the program with:
+
+(Pdb) c
+
+where c means continue.
+
+
+What does the help sentence mean?
+Your text says:
+
+"If you enter help into the prompt, you'll see a list of commands you can use"
+
+Because you're at:
+
+(Pdb)
+
+you can type:
+
+(Pdb) help
+
+and pdb will show you available debugger commands.
+
+Some of the most useful ones are:
+Command	        Meaning
+p variable	    Print a variable's value
+pp variable	    Pretty-print a value
+n	            Execute the next line
+s	            Step into a function
+c	            Continue running
+l	            Show nearby source code
+q	            Quit the debugger
+h	            Show help
+
+
+what is pbd:
+
+pdb - Python's debugger module/tool
+
+pdb.set_trace() - a function that starts the debugger
+
+breakpoint() - built-in function that starts a debugging session
+
+n, s, c, p, q - commands inside the PDB debugger
+
+
+                                            Common Python debugging tools
+
+                                            pdb — Python's built-in debugger.
+
+breakpoint()
+
+Used for stepping through code and inspecting variables.
+
+IDE debuggers — Visual interfaces built around Python debugging.
+
+VS Code debugger
+
+PyCharm debugger
+
+ipdb — An enhanced interactive version of pdb.
+
+import ipdb
+ipdb.set_trace()
+
+debugpy — Python debugger used for remote debugging and integration with VS Code.
+
+logging — Not technically a debugger, but extremely important for diagnosing applications.
+
+import logging
+logging.debug("value = %s", value)
+
+traceback — Python's tools for examining exceptions and stack traces.
+
+Profilers — Used more for performance debugging than normal bug debugging:
+
+cProfile
+
+profile
+
+py-spy
+
+line_profiler
+
+
+                                                Normal ways to use pdb(python built-in debugger)
+
+1. Import pdb and call it
+
+we put debugger breakpoint inside our code
+
+import pdb 
+
+def calculate():
+    x = 10
+    y = 20
+
+    pdb.set_trace()
+
+    result = x+y 
+    return result
+
+calculate()
+
+when python reach pdb.set_trace it stops and gives us the PDB debugger. and we can type the command such as
+
+(PDB) p x
+10
+(PDB) p y 
+20
+(pdb) n 
+(pdb) c 
+
+so basically we dont put pdb inside our code
+
+we put speciall function from the pdb module
+
+pdb.set_trace()
+
+
+2. Modern way to use is using breakpoint we dont need to import pdb simply we do:
+
+def calculate():
+    x = 10
+    y = 20
+
+    breakpoint()
+
+    result = x + y
+    return result   
+    
+By default, breakpoint() starts Python's PDB debugger.
