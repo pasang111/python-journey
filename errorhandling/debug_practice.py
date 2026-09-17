@@ -27,6 +27,7 @@ def calculate_total(price, quantity):
     final_price = total - discount
 
     pdb.set_trace()
+    # s() do this when u use line 23
 
     return final_price
 
@@ -35,3 +36,16 @@ quantity = 3
 
 result = calculate_total(price,quantity)
 print("Final price:", result)
+
+#using ipdb 
+#way to install it pip install ipdb
+from ipdb import set_trace as s
+
+x = 10
+y = 20
+
+s()
+
+result = x + y
+
+print(result)
