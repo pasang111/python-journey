@@ -1,0 +1,132 @@
+                                                Error Handling Review
+
+    common error in python:
+
+1. Syntax error : the error Python raises when your code does not follow its syntax rules. For example, the code print("Hello there" will lead to a syntax error with the message, SyntaxError: '(' was never closed, because the code is missing a closing parenthesis.
+
+2. A NameError occurs in Python when you try to use a variable or function that has not been defined. For example, if your code contains print(username) without defining the username variable beforehand, Python will return a NameError with the message NameError: name 'username' is not defined.
+
+3. A TypeError occurs in Python when you try to perform an operation using incompatible data types. For example, attempting to add a string and a number will result in a TypeError with a message such as TypeError: can only concatenate str (not "int") to str.
+
+4. An IndexError occurs in Python when you try to access an index that does not exist in a list or other sequences, such as tuples and strings. For example, in the string "hello world", the last character is at index 10. If you try to access greet[12], Python will raise an error with the message IndexError: string index out of range.
+
+5. An AttributeError occurs in Python when you try to access a method or property that is not available for a particular type of object. For example, using .append() on a string like "hello".append("!") will produce an error message such as AttributeError: 'str' object has no attribute 'append'.
+
+                                                Debugging Technique in Python
+
+Using the print function: Adding print() statements at different points in your code can help during debugging by showing variable values and allowing you to understand how the program is running.
+
+Using Python’s built-in debugger (pdb): Python includes the pdb module as part of its standard library, so it is readily available for debugging. With pdb, you can use the set_trace() function to pause your program, step through the code, and examine variables interactively.
+
+Using IDE debugging tools: Many IDEs and code editors, such as PyCharm and VS Code, provide built-in debugging features. These include breakpoints, step-by-step execution, variable inspection, and other tools that make it easier to find and fix errors.
+
+
+                                                Exceptional Handling
+
+* try...except : this is used to execute block of code that might raise and exception. the try block is where we anticipate an error might occur, while the except block take a specified exception and runs if that specified error is raised. for eg.
+
+try:
+    print(22\0)
+except ZeroDivisionError:
+    print("You cannot divide by zero")
+
+
+we can also do multiple chain except blocks so we can handle more types of exception:
+
+for eg:
+
+try:
+    number(int(input('enter a number')))
+    print(22 \ number)
+except ZeroDivisionError:
+    print('You cannot divide value by zero')
+except ValueError:
+    print('Please enter valid number!')
+
+* else and finally
+
+this block extend try..except. if no exception occur, the else block runs. The finally block always runs regardless errors.
+for eg:
+
+try:
+    result = 10\4
+except ZeroDivisionError:
+    print('Value cannot be divided by zero!')
+else:
+    print(f'{result} is obtained by you')
+finally:
+    print('exception complete!')
+
+                                                        Exception object
+
+this lets you access the exception itself for better debugging and printing the direct error message. to access the exception object, we need to use as keyword. for eg:
+
+try:
+    value = int('This will raise an error')
+except ValueError as e:
+    print(f'Caught an error: {e}')
+        # Caught an error: invalid literal for int() with base 10: 'This will raise an error'
+
+                                                        Raise statement
+
+this allow you to manually raise an exception. we can use it to throw an exception when a certain condition is met. Here's an example:
+
+def divide(a,b):
+    if b == 0
+        raise ZeroDivisionError('You cann divide by zero')
+    return a/b
+
+                                                        Exception Signaling
+
+the raise statement is also useful when you create your own custom exception, as you can use it to throw exception with a custom message. Here's an example of that:
+
+class InvalidCredentialError(Exception):
+    def ___init___(self, message="Invalid username or password"):
+        self.message__init__(self.message__init__)
+
+def login(username,password):
+    stored_username = "admin"
+    stored_password = "password124"
+
+    if username != stored_username or password ! = stored_password:
+        raise InvalidCredentialError    
+    
+    return f"Welcome, {username}!"
+
+
+Here's how we can use the login function with the InvalidCredentialError exception:
+
+#failed login attempt
+
+try:
+    message = login("user", "wrongpassword")
+except InvalidCredentialError as e:
+    print(f'login failed: {e}')
+else:
+    print(message)
+
+#successfull login attempt
+
+try:
+    message = login("admin","password124")
+except InvalidCredentialError as e:
+    # This block is not executed because the login was successful
+    print(f'login failed: {e}')
+else:
+    # The else block runs if the 'try' block completes without an exception
+    print(message)
+
+
+* The raise statement can also be used with the from keyword to chain exception, showing the relation between different error
+
+def parse_config(filename):
+    try:
+        with open(filename, 'r') as file:
+        data = file.read()\
+        return int(data)
+    except FileNotFoundError:
+        raise ValueError('Configuration file is missing') from None
+    except ValueError as e:
+        raise ValueError('Invalid Configuration format') from e
+
+config = parse_config('config.txt')
