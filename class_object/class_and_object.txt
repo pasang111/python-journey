@@ -1,49 +1,52 @@
-How Do Classes Work and How Do They Differ From Objects?
-In Python, classes and objects work hand in hand to organize and manage data. You build a class to define shared behavior, then create objects that use those behaviors.
+                                                            Class and Objects
 
-In other words, a class is like a blueprint or template you use to create objects with.
+                                                                1. Class
 
-Let's look at what classes are, and how to use them to create objects.
-
-To create a class, you use the class keyword followed by the name of the class and a colon. Then within the class, you can add an initializer, along with any attributes and methods.
-
-Attributes are like variables within a class, and are used to store data. Methods are functions defined within a class, and are the actions objects created with a class can perform.
-
-Here's the basic syntax of a class:
-
-class ClassName:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    def sample_method(self):               
-        print(self.name.upper())
-class ClassName is made up of the class keyword to create a class, followed by the name of the class, here called ClassName. It is common in Python to use the PascalCase convention when naming classes.
-
-def __init__(self, name, age) is the special method automatically called when a new object is created. It initializes the attributes of the objects that will be created with the class.
-
-In addition to that, the first parameter of __init__ is always a reference to the specific object being created or used. By convention, this parameter is named self, but technically, you can use any name. self lets you access the object's own attributes and methods.
-
-self.name = name and self.age = age are the attributes the objects will have.
-
-def sample_method(self): is the method each object created can call.
-
-print(self.name.upper()) is what the sample_method method will do, in this case, it prints the name in uppercase.
-
-If that all sounds like a lot, don't worry. Let's take a look at a similar example of a Dog class, and how you can create objects from that:
+A class is a description/plan for what something should have and what it can do... like its a blueprint 
+for eg:
 
 class Dog:
-    def __init__(self, name, age):
+    ...
+
+like think it as class = tells python what a Dog should have and do
+
+                                                                2.Object
+
+An object is an actual thing created from the class
+
+for eg 
+
+dog1 = Dog()
+dog2 = Dog()
+
+here from the above example
+- Dog = class
+- dog1 = object
+- dog2 = another object
+
+NOTE: We can create many object from one class
+
+Dog class
+    |
+   dog1
+   dog2
+   dog3
+
+                                                                3. __init__
+
+__init__ is used to automatically setup an object when we create it
+
+Class Dog:
+    def __init__(self,name,age)
         self.name = name
         self.age = age
 
-    def bark(self):
-        print(f"{self.name.upper()} says woof woof!")
-With this Dog class, you can create an object. Here's the basic syntax for creating objects from a class:
+when we do
 
-object_1 = ClassName(attribute_1, attribute_2)
-object_2 = ClassName(attribute_1, attribute_2)
-You can also call any of the methods defined in the class from each object:
+dog1 = Dog("Jack",3)
 
-object_1.method_name()
-object_2.method_name()
+python automatically run __init__
+and it sets:
+
+dog1.name = Jack
+dog2.name = 3
