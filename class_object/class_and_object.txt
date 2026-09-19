@@ -50,3 +50,185 @@ and it sets:
 
 dog1.name = Jack
 dog2.name = 3
+
+remember
+
+__init__ = setup the new object
+
+                                                    4. Parameters
+
+In:
+
+def __init__(self,name,age):
+
+name and age are Parameters its an empty box waiting for values
+
+like when we do
+
+dog1 = Dog("Jack", 3)
+
+the value goes into them
+
+name = Jack
+age = 3
+
+                                                        5. self
+
+self means this particular Object
+for eg:
+
+dog1 = Dog("Jack",3)
+Inside __init__, self refers to dog1
+
+so:
+self.name = name
+
+it basically means
+dog1.name = Jack
+
+and if 
+
+dog2 = Dog("Henry",10)
+then self refers to dog2
+
+self.name = name
+
+it becomes
+
+dog2.name = Henry
+
+
+                                                        6. attributes
+
+attributes = information or data that an object has
+
+here
+
+self.name = name
+self.age = age
+
+here name and age is an attributes
+
+we can access it like
+
+dog1.name
+dog1.age
+
+for eg:
+
+print(dog1.name)
+output Jack
+
+                                                        7. Methods
+
+A method is a function inside a class
+
+for eg:
+
+def bark(self):
+    print("Woof!!")
+
+bark is a Method
+
+it represent something the Dog can do
+
+So remember:
+attribute = what an object has
+method = what an object does
+
+For a dog it has
+name
+age
+
+what it does
+bark()
+
+                                        One Complete example:
+
+class Dog:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        print(f"{self.name.upper()} says woof!!")
+
+dog1 = Dog("Jack",3) # what this code does = 1. it create an empty object inside name dog1.
+                                            2. it automatically jump and trigger __init__ method
+                                            3. inside __init__ self automatically becomes dog1
+                                            4. it execult dog 1 = "Jack" and dog1.age = 3
+dog2 = Dog("Nutella",4)
+
+dog1.bark() # what this code does = When dog1.bark() runs, Python looks at the bark(self) method. Since dog1 called it, 
+            self.name targets dog1.name ("Jack"). It prints: JACK says woof woof
+
+dog2.bark()
+
+                                        Next one example adding celebration:
+
+class Dog:
+       # 1. Setup(Initializing data)
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+        # 2. Action 1 (Performs an action using the data)
+    def bark(self):
+        print(f"{self.name} says Woof!!!")
+    
+
+        # 3. Action 2 (Performs an action that updates the data)
+    def celebrate_birthday(self):
+        self.age += 1 # Adds 1 year to the dog's age
+        print(f"Happy birthday {self.name.upper()}!! You are now {self.age} years old.")
+
+#testing now
+
+dog1 = Dog("Dalgomi",3) # __init__ sets name="Jack", age=3
+dog1.bark()
+dog1.celebrate_birthday()
+
+dog2 = Dog("Meownis",4)
+dog2.bark()
+dog2.celebrate_birthday()
+
+
+                                            NOTE:  A function inside a class is called Methods
+
+while function is called by its name directly while method is cannot be called directly.. we call on an object using dot
+
+for eg calling function we do:
+
+def bark():
+    return "wooof!!"
+
+#calling function
+print(bark()) #the output is wooof
+
+now for calling method
+
+class Dog:
+    def __init__(self,name):
+        self.name = name
+    
+    #this is a method because it belongs to the class Dog
+    def introduce(self):
+        return f"Bark ! My name is {self.name}."
+
+#To call an method we must create an object at first
+my_dog = Dog("Buddy")
+
+#now calling method
+#we call it using a dog(.) on the object
+print(mydog.introduce())
+
+                                                        remember this 7 lines
+                                                        
+Term	                    Easy meaning
+Class	                    Description/plan
+Object	                    Actual thing created from class
+__init__	                Automatically sets up the object
+self	                    The particular object
+Parameter	                Empty box waiting for a value
+Attribute	                Data the object has
+Method	                    Action the object can perform
