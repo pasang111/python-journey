@@ -1,0 +1,146 @@
+                                                    Special method
+
+1. what is a method
+
+A method is a function that belongs to a class
+
+for example
+
+class Car:
+    def describe(self):
+        return "This is a car"
+Here describe is a normal method
+
+we call it like this:
+
+car.describe()
+
+the name describe is not special. we can change it to
+
+def show_info(self):
+    return "This is a car"
+
+then 
+
+car.show_info()
+
+So: Normal method names are chosen by you.
+
+                                                    What are special methods
+
+special method are methods that have double underscore at the beginning and the end
+for eg:
+
+__init__()
+__len__()
+__str__()
+__eq__()
+__gt__()
+
+they are also called :
+Magic methods
+Dunder methods
+
+Dunder means double underscore
+
+for example
+
+__len__ two underscore are at the beginning and the ending of len
+
+                                                        Normal method vs special method
+
+Normal method
+
+def describe(self):
+
+we decide what describe means
+
+we call it ourself
+
+car.describe()
+
+in special method
+
+def __len__(self):
+in this above line python already know what  __len__ is related to:
+len(object)
+
+so we normally write 
+len(book)
+and python use __len__() behind the scene
+
+                                                Most important idea 
+
+Note:   
+You define the special method inside your class. Python automatically uses it when you perform the corresponding operation on an object.
+
+for example
+
+class Book:
+    def __len__(self):
+        return self.pages
+
+then:
+len(book)
+
+python essentially does
+
+book.__len__()
+
+we normally dont need to call __len__() ourself 
+
+                                                    example
+
+class Book:
+    def __init__(self,title,page):
+        self.title = title
+        self.page = page
+    
+    def __len__(self):
+        return self.page
+    
+    def __str__(self):
+        return f"{self.title} has {self.page} pages"
+    
+    def __eq__(self, other):
+        return self.page == other.page
+
+#now we do
+
+book1 = Book("Python",300)
+book2 = Book("Java", 400)
+
+print(len(book1))
+print(str(book1))
+print(book1 == book2)
+
+Output
+300
+Python has 300 pages
+
+                                                    Common special methods
+
+Operation	Special method
+len(x)	__len__()
+str(x)	__str__()
+x == y	__eq__()
+x > y	__gt__()
+x < y	__lt__()
+x + y	__add__()
+x[0]	__getitem__()
+
+                                                    Most important things
+
+Normal method we do
+
+def describe(self):
+
+car.describe()
+
+Special method
+
+def __len__(self):
+len(car)
+
+Remember: You define __len__() inside the class → Python uses it when you write len(object).
+And you do not need to define every special method. Only define the ones whose behavior you want to customize.
