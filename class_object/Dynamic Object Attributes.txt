@@ -1,0 +1,224 @@
+what are attribute?
+
+attribute are variables that belong to an object
+
+class Car:
+    def __init__(self,name,brand):
+        self.name = name
+        self.brand = brand
+
+car = Car("lamborgini","Gallardo")
+
+print(car.name)
+print(car.model)
+
+Output:
+"lamborgini"
+"Gallardo"
+
+Normally we access an attribute like this
+car.brand like this
+
+but sometimes we dont know the attribute name until the program is running.
+That's when dynamically attributes are used
+
+                                            The 4 important functions
+
+Python gives us four functions:
+
+getattr() - get read an attribute
+setattr() - set an attribute
+hasattr() - check if an attribute exists 
+delattr() - delete an attribute
+
+                                                        1. getattr() — Get an attribute
+
+normally we do
+
+print(person.name)
+
+with getattr
+
+print(getattr(person, "name"))
+
+Both give:
+
+John
+
+The useful part is that the name can come from a variable:
+
+attribute = "name"
+
+print(getattr(person, attribute))
+
+So:
+
+attribute = "name"
+          ↓
+getattr(person, attribute)
+          ↓
+person.name
+
+                                                        setattr() — Create or change
+
+normal
+
+person.age = 40
+
+but with setattr we do
+
+setattr(person, "age", 30)
+
+it can also create a completely new attribute:
+
+setattr(person, "city", "Kathmandu")
+
+print(person.city)
+
+output Kathmandu
+
+so:
+setattr(person, "city", "Kathmandu")
+        ↓
+person.city = "Kathmandu"
+
+                                                        3. hasattr() — Check
+
+hasattr() asks:
+
+Does this object has this attribute?
+
+for example
+
+if hasattr(person, "age"):
+    print("Age exists")
+
+it return either true or false
+
+example
+
+hasattr(example, "name") true
+hasattr(example, "phone") false
+
+                                                    4. delattr() — Delete
+
+Normally:
+
+del person.age
+
+with delattr():
+
+delattr(person, "age")
+
+Now age is removed from the object
+
+so:
+delattr(person, "age")
+        ↓
+delete person.age
+
+                                                    5.dir() — See attributes
+
+dir shows the name available on an object
+
+print(dir(person))
+
+It gives a list containing things like:
+
+['age', 'name', '__class__', '__init__', ...]
+
+There will be many special/dunder names too.
+
+so we can filter them:
+
+for attr in dir(person):
+    if not attr.starswith('__'):
+        print(attr)
+
+                                                  6. callable()
+
+callable() checks wheather something can be called like a function:
+
+callable(something)
+
+it returns either 
+true
+or
+false
+
+This is useful when using dir() because an object can contain both attributes and methods.
+
+
+                                                7. important example
+
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+person = Person("John",30)
+
+now
+
+attribute = "name"
+print(getattr(person, attribute))
+
+output : John
+
+change it
+
+print(setattr(person, "age", 35))
+
+check it
+
+print(hasattr(person, "age"))
+
+output
+
+true
+
+Delete it:
+
+delattr(person, "age")
+
+check again
+
+hasattr(person, "age")
+
+Output:
+
+False
+
+                                                        Easy cleansheet
+
+Function	Meaning	Example
+getattr()	Get/read	getattr(person, "name")
+setattr()	Create/change	setattr(person, "age", 30)
+hasattr()	Check	hasattr(person, "age")
+delattr()	Delete	delattr(person, "age")
+dir()      	See available names	dir(person)
+callable()	Check if callable	callable(x)
+
+
+Remember:
+
+getattr  → GET
+setattr  → SET
+hasattr  → HAS?
+delattr  → DELETE
+dir      → SEE what's there
+callable → CAN I call it?
+
+main idea:
+
+Dynamic attributes let you work with attribute names stored in variables instead of writing the attribute name directly.
+
+For example:
+
+name = "age"
+
+getattr(person, name)
+
+instead of:
+
+person.age
