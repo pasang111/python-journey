@@ -1,0 +1,171 @@
+                                What is Object-Oriented Programming, and How Does Encapsulation Work?
+
+1. What is OOP?
+OOP (Object-Oriented Programming) is a way of writing programs by thinking about things as objects.
+
+For example, in a program about cars, a car can be an object.
+
+A car has:
+
+Data → color, brand, speed
+
+Behaviors → drive(), brake(), honk()
+
+So we can think:
+
+Object = data + actions
+
+2. What is a class?
+A class is like a blueprint.
+
+Think about a house blueprint 🏠.
+
+The blueprint tells you:
+
+how many rooms
+
+where the doors go
+
+where the windows go
+
+But the blueprint itself isn't a real house.
+
+You can use the blueprint to create many houses.
+
+Similarly:
+
+Class = blueprint
+Object = actual thing created from the blueprint
+
+For example:
+
+class Car:
+    pass
+Car is a class.
+
+We can create objects from it:
+
+car1 = Car()
+car2 = Car()
+Now car1 and car2 are two different objects created from the Car class.
+
+3. What are attributes?
+Attributes are the data/information that an object has.
+
+For a car, attributes could be:
+
+color = "red"
+brand = "Toyota"
+speed = 100
+In Python:
+
+class Car:
+    def __init__(self, color, brand):
+        self.color = color
+        self.brand = brand
+Now:
+
+car1 = Car("Red", "Toyota")
+car1 has:
+
+color → Red
+brand → Toyota
+So:
+
+Attribute = information/data about an object
+
+4. What are methods?
+Methods are actions that an object can perform.
+
+For example, a car can:
+
+drive
+
+stop
+
+honk
+
+In Python:
+
+class Car:
+    def drive(self):
+        print("The car is driving")
+drive() is a method.
+
+We can use it:
+
+car1.drive()
+Output:
+
+The car is driving
+So:
+
+Method = action/behavior of an object
+
+5. Understanding __init__
+This part:
+
+def __init__(self, color, brand):
+is a special method that runs automatically when you create an object.
+
+For example:
+
+car1 = Car("Red", "Toyota")
+Python automatically calls:
+
+__init__("Red", "Toyota")
+It uses those values to set up the object.
+
+6. What does self mean?
+This is one of the most confusing parts for beginners.
+
+self.color = color
+Think of self as:
+
+"this particular object"
+
+Suppose we have:
+
+car1 = Car("Red", "Toyota")
+car2 = Car("Blue", "Honda")
+Then:
+
+car1.color
+is "Red".
+
+And:
+
+car2.color
+is "Blue".
+
+self makes sure Python knows which object's data we're talking about.
+
+7. Putting everything together
+Here's a complete example:
+
+class Car:
+
+    def __init__(self, color, brand):
+        self.color = color
+        self.brand = brand
+
+    def drive(self):
+        print("The car is driving")
+Create objects:
+
+car1 = Car("Red", "Toyota")
+car2 = Car("Blue", "Honda")
+Access their attributes:
+
+print(car1.color)
+print(car2.brand)
+Output:
+
+Red
+Honda
+Call their method:
+
+car1.drive()
+Output:
+
+The car is driving
