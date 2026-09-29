@@ -169,3 +169,105 @@ car1.drive()
 Output:
 
 The car is driving
+
+Object-Oriented Programming (OOP) is a programming approach that organizes code using objects and classes.
+
+OOP has four main principles:
+
+Encapsulation
+
+Inheritance
+
+Polymorphism
+
+Abstraction
+
+1. Encapsulation
+Encapsulation means bundling the data (attributes) and the methods that work with that data into a single unit called a class.
+
+It also helps protect an object's internal data by controlling how that data can be accessed or changed.
+
+Simple idea
+Think of encapsulation like a locked box:
+
+The data inside the box is protected.
+
+Public methods act like doors.
+
+Users interact with the object through those doors instead of directly changing its internal data.
+
+Example: Wallet
+Suppose we create a Wallet class that stores a balance.
+
+We want users to:
+
+Deposit money.
+
+Withdraw money.
+
+But not directly modify the balance.
+
+class Wallet:
+    def __init__(self, balance):
+        self._balance = balance
+
+    def deposit(self, amount):
+        if amount > 0:
+            self._balance += amount
+
+    def withdraw(self, amount):
+        if 0 < amount <= self._balance:
+            self._balance -= amount
+
+How this works
+_balance → stores the wallet's internal balance.
+
+deposit() → safely adds money to the balance.
+
+withdraw() → safely removes money from the balance.
+
+The conditions prevent invalid operations such as depositing a negative amount or withdrawing more money than the available balance.
+
+What does _balance mean?
+In Python, a single underscore (_) is mainly a convention that means:
+
+"This attribute is intended for internal use."
+
+It does not make the attribute completely private. Python allows access to it, but programmers are expected to interact with the data through the class's methods.
+
+Why is Encapsulation Important?
+Encapsulation helps you:
+
+Protect data from unintended changes.
+
+Control how data is modified.
+
+Keep code organized.
+
+Reduce errors by validating data before changing it.
+
+Hide implementation details from the user of the class.
+
+Key Point to Remember
+Encapsulation = Data + Methods + Controlled Access
+
+For the Wallet example:
+
+Wallet
+ ├── _balance       → Internal data
+ ├── deposit()      → Public method
+ └── withdraw()     → Public method
+
+Instead of directly changing:
+
+wallet._balance = 100000
+
+we normally use the provided methods:
+
+wallet.deposit(500)
+wallet.withdraw(100)
+
+This gives the class control over how its data changes.
+
+One-Line Definition
+Encapsulation is the practice of bundling data and the methods that operate on it inside a class while controlling access to the internal data.
